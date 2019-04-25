@@ -1,2 +1,2 @@
 # Web-Dashboard
-Anik Myriam, Cusumano Nicolas and Vincent Shmid's project. 
+Anik Myriam, Cusumano Nicolas and Vincent Schmid's project. 

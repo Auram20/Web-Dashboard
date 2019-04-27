@@ -1,3 +1,4 @@
+import Infos from './Infos'
 import { h } from 'hyperapp'
 // import * as DnD from '../../request/DnD.js'
 
@@ -5,6 +6,9 @@ import { h } from 'hyperapp'
 
 export default (/* state, actions */) => {
   return (
-    <div>salut</div>
+    
+    <div>
+      <Infos/>
+    </div>
   )
 }

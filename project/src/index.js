@@ -3,7 +3,7 @@ import { app } from 'hyperapp'
 
 import actions from './actions'
 import state from './state'
-import view from './components/views/App'
+import view from './components/views/App/App'
 
 app(
   state,

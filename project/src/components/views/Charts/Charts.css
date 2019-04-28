@@ -1,9 +1,32 @@
 .charts {
   grid-column: 2;
   grid-row: 1;
+  width : 300px;
+  height: 300px;
 }
 
 .charts canvas {
   width: 100%;
   height: 100%;
+}
+
+input{
+  width: 100px;
+}
+
+p{
+  margin:0px;
+  border-style: solid;
+  border-width: 1px;
+  width: 60px;
+}
+
+.stats{
+  margin-left: 50px;
+  display: grid;
+}
+
+.first{
+  grid-column: 2;
+  grid-row: 1;
 }

@@ -14,5 +14,8 @@ export default {
   },
   weapon2: {
     input: ''
+  },
+  inventory: {
+    input: ''
   }
 }

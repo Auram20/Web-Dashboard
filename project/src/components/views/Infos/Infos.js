@@ -20,8 +20,8 @@ export default (props) => {
       <Races reload={actions.reload} state={state}>Races</Races>
       <Class reload={actions.reload} state={state}>Class</Class>
       <Skills reload={actions.reload} state={state}>Skills</Skills>
-      <Equipment actions={actions} state={state['equipment']}>First Weapon</Equipment> 
-      <Equipment actions={actions} state={state['equipment']}>Second Weapon</Equipment> 
+      <Equipment actions={actions} state={state['equipment']}>First Weapon</Equipment>
+      <Equipment actions={actions} state={state['equipment']}>Second Weapon</Equipment>
 
     </div>
   )

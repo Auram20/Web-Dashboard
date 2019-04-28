@@ -1,7 +1,22 @@
-div
+div 
 {
  font-size: 10px;
  margin : 10px;
  width: 100px;
- height: 30px;
+}
+
+div > .searchInput {
+    margin : 0px;
+}
+
+.inputResults {
+  display: none;
+  background: #DFE6E1;
+  margin: 0;
+  margin-left: 10px;
+  height: 15px;
+}
+
+input:focus + .inputResults, input:focus + .inputResults + .inputResults, input:focus + .inputResults + .inputResults + .inputResults { 
+  display: block; 
 }

@@ -15,12 +15,12 @@ export default (promise) => (props, children) => {
       .then((res) => res && actions.reload({results: res, what: 'equipment'}))
   }
 
-  const suggestions = results.slice(0, 3).map((item, index) => <div key={index}>{item.name}</div>)
+  const suggestions = results.slice(0, 3).map((item, index) => <div key={index} class='inputResults'>{item.name}</div>)
   console.log(results)
 
   return (
     <div className='searchInput'>
-      <input type='text' placeholder={children} onchange={actions.changeEquipment}/>
+      <input type='text' placeholder={children} onchange={actions.changeEquipment} />
       {suggestions}
     </div>
   )

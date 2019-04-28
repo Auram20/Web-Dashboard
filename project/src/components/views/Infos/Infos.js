@@ -1,12 +1,14 @@
 import './Infos.css'
 import { h } from 'hyperapp'
 import Select from '../../Select/Select'
-
-// DnD a besoin d'une fonction de callback à mettre dans then
+import SearchInput from '../../SearchInput/SearchInput.js'
+import * as DnD from '../../../apiDnD/DnD.js'
 
 export default (props) => {
   const {state, actions} = props
   const Races = Select('races')
+  const Skills = Select('skills')
+  const Equipment = SearchInput(DnD.getEquipment('Weapon'))
 
   return (
     <div>
@@ -15,6 +17,8 @@ export default (props) => {
       <input type="text" name="title" value="Level " />
 
       <Races reload={actions.reload} state={state}>Races</Races>
+      <Skills reload={actions.reload} state={state}>Skills</Skills>
+      <Equipment actions={actions} state={state['equipment']} />
 
       <select>
         <option value="equipements" selected disabled hidden>Alignement</option>

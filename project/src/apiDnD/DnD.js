@@ -21,3 +21,14 @@ export const getRessource = (category, id = '') => {
 
   return getFromURL(`${baseURL}/${category}/${id}`)
 }
+
+export const getEquipment = (type) => {
+  return getRessource('equipment')
+    .then(({results}) => {
+      return Promise.all(results.map((item) => getFromURL(item.url)))
+    })
+    .then((items) => type
+      ? items.filter(({equipment_category}) => equipment_category === type)
+      : items
+    )
+}

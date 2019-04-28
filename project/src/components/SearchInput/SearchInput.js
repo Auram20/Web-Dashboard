@@ -1,26 +1,23 @@
 import './SearchInput.css'
 import { h } from 'hyperapp'
-// import * as DnD from '../../apiDnD/DnD.js'
 
-export default (promise) => (props, children) => {
-  const {state, actions} = props
-  const results = state.results
+export default (category) => (props, children) => {
+  const {state, actions, what} = props
+  const bdd = state.bdd[category]
 
-  if (results.length === 0) {
-    promise
-      .then((res) => state.input !== ''
-        ? res.filter((item) => item.name.indexOf(state.input) === 0)
-        : res
-      )
-      .then((res) => res && actions.reload({results: res, what: 'equipment'}))
-  }
+  const allSuggestions = state.input !== ''
+    ? bdd.filter((item) => {
+      const itemName = item.name.toLowerCase()
+      const stateInput = state[what].input.toLowerCase()
+      return itemName.indexOf(stateInput) === 0
+    })
+    : bdd
 
-  const suggestions = results.slice(0, 3).map((item, index) => <div key={index} class='inputResults'>{item.name}</div>)
-  console.log(results)
+  const suggestions = allSuggestions.slice(0, 3).map((item, index) => <div key={index} class='inputResults'>{item.name}</div>)
 
   return (
-    <div className='searchInput'>
-      <input type='text' placeholder={children} onchange={actions.changeEquipment} />
+    <div className={category + ' searchInput'}>
+      <input type='text' placeholder={children} onchange={(e) => actions.change({event: e, what})} />
       {suggestions}
     </div>
   )

@@ -1,19 +1,18 @@
 export default {
+  load: {},
   races: {
-    results: []
   },
   skills: {
-    results: []
   },
   classes: {
-    results: []
   },
-  equipment: {
-    results: [],
+  armor: {
     input: ''
   },
-  equipment: {
-    results: [],
+  weapon1: {
+    input: ''
+  },
+  weapon2: {
     input: ''
   }
 }

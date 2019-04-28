@@ -32,3 +32,17 @@ export const getEquipment = (type) => {
       : items
     )
 }
+
+export const getClasses = () => {
+  return getRessource('classes')
+    .then(({results}) => {
+      return Promise.all(results.map((item) => getFromURL(item.url)))
+    })
+}
+
+export const getRaces = () => {
+  return getRessource('races')
+    .then(({results}) => {
+      return Promise.all(results.map((item) => getFromURL(item.url)))
+    })
+}

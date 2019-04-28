@@ -50,6 +50,7 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "chai-as-promised": "^7.1.1",
+    "chart.js": "^2.8.0",
     "es6-promise": "^4.2.4",
     "fusioncharts": "^3.13.4",
     "hyperapp": "^1.1.2",

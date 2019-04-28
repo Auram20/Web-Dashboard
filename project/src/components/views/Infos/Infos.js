@@ -14,8 +14,8 @@ export default (props) => {
   return (
     <div>
       <img src="http://www.alluserpics.com/data/media/16/music_pinguin.jpg" alt="Logo" />
-      <input type="text" name="title" value="Name " />
-      <input type="text" name="title" value="Level " />
+      <input type="text" name="title" placeholder="Name " />
+      <input type="text" name="title" placeholder="Level " />
 
       <Races reload={actions.reload} state={state}>Races</Races>
       <Class reload={actions.reload} state={state}>Class</Class>

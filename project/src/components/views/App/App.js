@@ -1,4 +1,5 @@
 import Infos from '../Infos/Infos'
+import Charts from '../Charts/Charts'
 import './App.css'
 import { h } from 'hyperapp'
 import * as DnD from '../../../apiDnD/DnD.js'
@@ -62,6 +63,7 @@ export default (state, actions) => {
   return (
     <div>
       <Infos state={state} actions={actions}/>
+      <Charts />
     </div>
   )
 }

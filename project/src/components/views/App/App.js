@@ -17,14 +17,17 @@ const hasLoaded = (smthg) => (state) => {
   return true && state.load[smthg]
 }
 
-const equipmentHaveLoaded = hasLoaded('equipment')
+const loadCategory = (category, state, actions) => {
+  if (!hasLoaded(category)(state)) {
+    actions.load({what: category,
+      promise: DnD.getDetailedRessource(category)
+        .then((items) => actions.update({data: items, what: category}))
+    })
+  }
+}
 
-const classesHaveLoaded = hasLoaded('classes')
-
-const racesHaveLoaded = hasLoaded('races')
-
-export default (state, actions) => {
-  if (!equipmentHaveLoaded(state)) {
+const loadEquipment = (state, actions) => {
+  if (!hasLoaded('equipment')(state)) {
     actions.load({what: 'equipment',
       promise: DnD.getEquipment()
         .then((items) => {
@@ -39,31 +42,26 @@ export default (state, actions) => {
             }
           })
           const resultsArray = Object.keys(groups).map((key) => ({data: groups[key], what: key}))
-          console.log(resultsArray)
           actions.updateMany(resultsArray)
-          console.log('equipment have loaded')
         })
     })
   }
+}
 
-  if (!classesHaveLoaded(state)) {
-    actions.load({what: 'classes',
-      promise: DnD.getClasses()
-        .then((items) => actions.update({data: items, what: 'classes'}))
-    })
-  }
+export default (state, actions) => {
+  loadEquipment(state, actions)
+  loadCategory('classes', state, actions)
+  loadCategory('races', state, actions)
+  loadCategory('ability-scores', state, actions)
 
-  if (!racesHaveLoaded(state)) {
-    actions.load({what: 'races',
-      promise: DnD.getRaces()
-        .then((items) => actions.update({data: items, what: 'races'}))
-    })
-  }
+  const specsCharacter = Object.keys(state.character.specs).length
+    ? {labels: state.bdd['ability-scores'].map((item) => item.name), data: state.character.specs}
+    : {labels: ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'], data: new Array(6).fill(0)}
 
   return (
-    <div>
+    <main>
       <Infos state={state} actions={actions}/>
-      <Charts />
-    </div>
+      <Charts type='radar' data={specsCharacter} label='Specs' id="chart" />
+    </main>
   )
 }

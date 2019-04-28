@@ -1,12 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
   min-height: 100vh;
   margin: 0;
-  display: flex;
   font-size: calc(10px + 2vmin);
 }
 
-
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
 
 section > *+* {
   margin-left: 2rem;

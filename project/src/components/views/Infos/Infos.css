@@ -1,17 +1,13 @@
-body 
-{
-    font-family: sans-serif;
-
-}
-
-div
+div#info
 {
     display: flex;
     flex-direction: column;
     margin:30px;
+    grid-column: 1;
+    grid-row: 1 / 3;
 }
 
-input, select
+#info input, #info select
 {
     width: 100px;
     margin: 10px;

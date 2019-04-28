@@ -4,7 +4,8 @@ const BDD = {
   inventory: [],
   classes: [],
   races: [],
-  skills: []
+  skills: [],
+  'ability-scores': []
 }
 
 export default BDD

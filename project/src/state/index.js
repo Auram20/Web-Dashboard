@@ -1,10 +1,14 @@
 export default {
   load: {},
-  races: {
-  },
-  skills: {
-  },
-  classes: {
+  character: {
+    stats: {},
+    specs: {},
+    weapon1: {},
+    weapon2: {},
+    armor: {},
+    race: {},
+    classe: {},
+    inventory: []
   },
   armor: {
     input: ''

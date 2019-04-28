@@ -12,7 +12,7 @@ export default (props) => {
   const Inventory = SearchInput('inventory')
 
   return (
-    <div>
+    <div id='info'>
       <img src="http://www.alluserpics.com/data/media/16/music_pinguin.jpg" alt="Logo" />
       <input type="text" name="title" placeholder="Name " />
       <input type="text" name="title" placeholder="Level " />

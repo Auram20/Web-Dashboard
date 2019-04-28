@@ -33,16 +33,13 @@ export const getEquipment = (type) => {
     )
 }
 
-export const getClasses = () => {
-  return getRessource('classes')
+export const getDetailedRessource = (category) => {
+  return getRessource(category)
     .then(({results}) => {
       return Promise.all(results.map((item) => getFromURL(item.url)))
     })
 }
 
-export const getRaces = () => {
-  return getRessource('races')
-    .then(({results}) => {
-      return Promise.all(results.map((item) => getFromURL(item.url)))
-    })
-}
+export const getClasses = () => getDetailedRessource('classes')
+
+export const getRaces = () => getDetailedRessource('races')

@@ -5,6 +5,9 @@ export default {
   skills: {
     results: []
   },
+  classes: {
+    results: []
+  },
   equipment: {
     results: [],
     input: ''

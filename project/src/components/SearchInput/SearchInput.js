@@ -2,7 +2,7 @@ import './SearchInput.css'
 import { h } from 'hyperapp'
 // import * as DnD from '../../apiDnD/DnD.js'
 
-export default (promise) => (props) => {
+export default (promise) => (props, children) => {
   const {state, actions} = props
   const results = state.results
 
@@ -20,7 +20,7 @@ export default (promise) => (props) => {
 
   return (
     <div className='searchInput'>
-      <input type='text' placeholder='Equipment' onchange={actions.changeEquipment}/>
+      <input type='text' placeholder={children} onchange={actions.changeEquipment}/>
       {suggestions}
     </div>
   )

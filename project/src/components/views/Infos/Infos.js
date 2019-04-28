@@ -10,6 +10,7 @@ export default (props) => {
   const Skills = Select('skills')
   const Class = Select('classes')
   const Equipment = SearchInput(DnD.getEquipment('Weapon'))
+  const Equipment2 = SearchInput(DnD.getEquipment('Armor'))
 
   return (
     <div>
@@ -22,6 +23,7 @@ export default (props) => {
       <Skills reload={actions.reload} state={state}>Skills</Skills>
       <Equipment actions={actions} state={state['equipment']}>First Weapon</Equipment>
       <Equipment actions={actions} state={state['equipment']}>Second Weapon</Equipment>
+      <Equipment2 actions={actions} state={state['equipment']}>Armor</Equipment2>
 
     </div>
   )

@@ -11,5 +11,9 @@ export default {
   equipment: {
     results: [],
     input: ''
+  },
+  equipment: {
+    results: [],
+    input: ''
   }
 }

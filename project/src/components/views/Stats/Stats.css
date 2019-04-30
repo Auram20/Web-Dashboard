@@ -1,0 +1,24 @@
+.stats{
+  margin-left: 50px;
+  display: grid;
+}
+
+.first{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+p{
+  margin:0px;
+  border-style: solid;
+  border-width: 1px;
+  width: 100px;
+
+}
+
+#skillsArea{
+  border-style: solid;
+  border-width: 1px;
+  width: 300px;
+  height: 100px;
+}

@@ -17,7 +17,7 @@ export default (props) => {
 
     }
 
-    const myRadarChart = new Chart(ctx, {
+    const myNewChart = new Chart(ctx, {
       type: type,
       data: {
         labels: data.labels,
@@ -35,7 +35,7 @@ export default (props) => {
   return (
     <div className={'charts'}>
       <canvas width={500} height={500} oncreate={onLoad} />
-      <div class='stats'>
+      {/* <div class='stats'>
       <div class='first'>
         <p>STREN   : 00 </p>
         <p>DEXTE    : 00 </p>
@@ -46,7 +46,7 @@ export default (props) => {
         <p>WISDO    : 00</p>
         <p>CHAR     : 00</p>
       </div>
-      </div>
+      </div> */}
     </div>
   )
 }

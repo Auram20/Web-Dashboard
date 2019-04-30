@@ -9,7 +9,6 @@ export default (props) => {
   const Class = Select('classes')
   const Weapon = SearchInput('weapons')
   const Armor = SearchInput('armors')
-  const Inventory = SearchInput('inventory')
 
   return (
     <div id='info'>
@@ -22,8 +21,6 @@ export default (props) => {
       <Weapon actions={actions} state={state} what={'weapon1'}>Main Hand</Weapon>
       <Weapon actions={actions} state={state} what={'weapon2'}>Secondary Hand</Weapon>
       <Armor actions={actions} state={state} what={'armor'}>Armor</Armor>
-      <Inventory actions={actions} state={state} what={'armor'}>Main Accessory</Inventory>
-      <Inventory actions={actions} state={state} what={'armor'}>Secondary Accessory</Inventory>
 
     </div>
   )

@@ -3,6 +3,8 @@ import Charts from '../Charts/Charts'
 import Specs from '../Stats/Specs'
 import Stats from '../Stats/Stats'
 import Skills from '../Stats/Skills'
+import Inventory from '../Inventory/Inventory'
+import Spells from '../Spells/Spells'
 import './App.css'
 import { h } from 'hyperapp'
 import * as DnD from '../../../apiDnD/DnD.js'
@@ -70,6 +72,10 @@ export default (state, actions) => {
       <Specs />
       <Stats />
       <Skills />
+      <canvas></canvas>
+      <Inventory />
+      <canvas></canvas>
+      <Spells />
     </main>
   )
 }

@@ -21,8 +21,5 @@ export default {
   },
   inventory: {
     input: ''
-  },
-  skills: {
-    input: ''
   }
 }

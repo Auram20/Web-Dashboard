@@ -21,5 +21,6 @@ export default {
       return {...acc, bdd: newBdd, load: newLoad, loading: newLoading}
     },
     state),
-  change: ({event, what}) => (state) => ({...state, [what]: {...state[what], input: event.target.value}})
+  change: ({event, what}) => (state) => ({...state, [what]: {...state[what], input: event.target.value}}),
+  updateCharacter: ({what, value}) => (state) => ({...state, character: {...state.character, [what]: value}})
 }

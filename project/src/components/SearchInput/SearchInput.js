@@ -13,7 +13,7 @@ export default (category) => (props, children) => {
     })
     : bdd
 
-  const suggestions = allSuggestions.slice(0, 3).map((item, index) => <div key={index} class='inputResults'>{item.name}</div>)
+  const suggestions = allSuggestions.slice(0, 3).map((item, index) => <div key={index} data-value={index} class='inputResults'>{item.name}</div>)
 
   return (
     <div className={category + ' searchInput'}>

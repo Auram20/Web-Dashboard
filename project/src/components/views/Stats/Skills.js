@@ -10,7 +10,7 @@ export default () => {
         <option selected value="coconut">Coconut</option>
         <option value="mango">Mango</option>
       </select>
-      <canvas id="skillsArea"></canvas>
+      <div id="skillsArea"></div>
     </div>
   )
 }

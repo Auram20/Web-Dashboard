@@ -33,6 +33,16 @@ export const getEquipment = (type) => {
     )
 }
 
+export const getLevels = (classe) => {
+  const array20 = new Array(20)
+  array20.fill(0)
+  const promises = Promise.all(array20.map((i, index) => {
+    const url = `${baseURL}/classes/${classe}/level/${index + 1}`
+    return getFromURL(url)
+  }))
+  return promises
+}
+
 export const getDetailedRessource = (category) => {
   return getRessource(category)
     .then(({results}) => {

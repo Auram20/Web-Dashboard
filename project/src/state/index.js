@@ -1,13 +1,13 @@
 export default {
   load: {},
   character: {
-    stats: {},
-    specs: {},
-    weapon1: {},
-    weapon2: {},
-    armor: {},
-    race: {},
-    classe: {},
+    stats: new Array(6).fill(8),
+    specs: new Array(6).fill(0),
+    weapon1: null,
+    weapon2: null,
+    armor: null,
+    race: null,
+    classe: null,
     inventory: []
   },
   armor: {
@@ -20,6 +20,9 @@ export default {
     input: ''
   },
   inventory: {
+    input: ''
+  },
+  spells: {
     input: ''
   }
 }

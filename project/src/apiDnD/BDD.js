@@ -5,7 +5,8 @@ const BDD = {
   classes: [],
   races: [],
   skills: [],
-  'ability-scores': []
+  'ability-scores': [],
+  spells: []
 }
 
 export default BDD

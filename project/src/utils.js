@@ -24,3 +24,57 @@ export const STAT = {
   WIS: 4,
   CHA: 5
 }
+
+export const barTemplate = (data, text) => ({
+  type: 'bar',
+  data: {
+    labels: data.labels,
+    datasets: [{
+      label: '1',
+      backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#e8c3b9', '#c45850', '#1d15da'],
+      borderColor: 'rgb(255, 99, 132)',
+      data: data.values
+    }]
+  },
+  options: {
+    title: {
+      display: text,
+      text: text
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 5,
+          stepSize: 1
+        }
+      }]
+    }
+  }
+})
+
+export const radarTemplate = (data, text) => ({
+  type: 'radar',
+  data: {
+    labels: data.labels,
+    datasets: [{
+      label: '1',
+      backgroundColor: 'red',
+      borderColor: 'rgb(255, 99, 132)',
+      data: data.values
+    }]
+  },
+  options: {
+    title: {
+      display: text,
+      text: text
+    },
+    scale: {
+      ticks: {
+        min: 0,
+        max: 5,
+        stepSize: 1
+      }
+    }
+  }
+})

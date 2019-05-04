@@ -4,7 +4,6 @@ export default {
   load: {},
   character: {
     stats: initStat(new Array(6).fill(8)),
-    specs: new Array(6).fill(0),
     level: 1,
     weapon1: null,
     weapon2: null,

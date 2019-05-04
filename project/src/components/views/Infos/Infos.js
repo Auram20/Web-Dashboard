@@ -14,14 +14,18 @@ export default (props) => {
     <div id='info'>
       <img src="http://www.alluserpics.com/data/media/16/music_pinguin.jpg" alt="Logo" />
       <input type="text" name="title" placeholder="Name " />
-      <input type="number" name="title" placeholder="Level " min={1} max={20} />
+      <input type="number" name="title" placeholder="Level " min={1} max={20} value={state.character.level} onchange={actions.changeLevel} />
 
       <Races
         reload={actions.reload}
         state={state}
         onchange={(e) => actions.updateCharacter({what: 'race', value: e.target.value})}
       >Races</Races>
-      <Class reload={actions.reload} state={state}>Class</Class>
+      <Class
+        reload={actions.reload}
+        state={state}
+        onchange={(e) => actions.updateCharacter({what: 'classe', value: e.target.value})}
+      >Class</Class>
       <Weapon actions={actions} state={state} what={'weapon1'}>Main Hand</Weapon>
       <Weapon actions={actions} state={state} what={'weapon2'}>Secondary Hand</Weapon>
       <Armor actions={actions} state={state} what={'armor'}>Armor</Armor>

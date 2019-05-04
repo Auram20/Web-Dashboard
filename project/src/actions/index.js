@@ -1,3 +1,5 @@
+import {clamp} from '../utils'
+
 export default {
   load: ({promise, what}) => (state) =>
     promise
@@ -22,5 +24,7 @@ export default {
     },
     state),
   change: ({event, what}) => (state) => ({...state, [what]: {...state[what], input: event.target.value}}),
-  updateCharacter: ({what, value}) => (state) => ({...state, character: {...state.character, [what]: value}})
+  updateCharacter: ({what, value}) => (state) => ({...state, character: {...state.character, [what]: value}}),
+  changeLevel: (e) => (state) => ({...state, character: {...state.character, level: clamp(e.target.min, e.target.max, e.target.value)}}),
+  changeStat: ({event, key}) => (state) => ({...state, stats: {...state.stats, [key]: clamp(event.target.min, event.target.max, event.target.value) - event.target.min}})
 }

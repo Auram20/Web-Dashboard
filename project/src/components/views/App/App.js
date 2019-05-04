@@ -21,11 +21,11 @@ export default (state, actions) => {
   return (
     <main>
       <Infos state={state} actions={actions}/>
-      <Charts chart={barTemplate(specsCharacter, 'Specs')} id="chart1"/>
-      <Charts chart={radarTemplate(specsCharacter, 'Stats')} id="chart2"/>
-      <Charts chart={barTemplate(specsCharacter, 'Skills')} id="chart3"/>
-      <Specs />
-      <Stats character={state.character}/>
+      <Charts key={0} chart={barTemplate(specsCharacter, 'Specs')} id="chart1"/>
+      <Charts key={1} chart={radarTemplate(specsCharacter, 'Stats')} id="chart2"/>
+      <Charts key={3} chart={barTemplate(specsCharacter, 'Skills')} id="chart3"/>
+      <Specs state={state} changeStat={actions.changeStat} />
+      <Stats state={state}/>
       <Skills />
       <Inventory state={state} actions={actions} />
       <Spells state={state}/>

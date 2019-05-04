@@ -15,12 +15,15 @@ export default (props) => {
   }
 
   const onUpdate = (element) => {
-    const ctx =
+    const parent = element.parentNode
+    const el =
       element.tagName === 'CANVAS'
-        ? element.getContext('2d')
-        : element.parentNode.getElementsByTagName('canvas')[0].getContext('2d')
+        ? element
+        : parent.querySelector('canvas')
 
-    const myNewChart = new Chart(ctx, chart)
+    const clone = el.cloneNode(true)
+    parent.replaceChild(clone, el) // remove all event listeners
+    const myNewChart = new Chart(clone.getContext('2d'), chart)
   }
 
   return (

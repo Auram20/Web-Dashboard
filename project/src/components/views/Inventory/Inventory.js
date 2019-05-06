@@ -9,13 +9,14 @@ export default (props) => {
   return (
     <div id="inventory">
       INVENTORY
-      <Inventory actions={actions} state={state}>Inventory</Inventory>
+      <Inventory onchange={(e) => actions.change({event: e, what: 'inventory'})} state={state}>Inventory</Inventory>
+      <button type="button" onclick={() => actions.addToInvList()}> Ajouter </button>
       <div class="grid">
         <div class="element" id="firstWeapon">Empty</div>
         <div class="element" id="secondWeapon">Empty</div>
         <div class="element" id="armor">Empty</div>
-        <div class="element">Empty</div>
-        <div class="element">Empty</div>
+        <div class="element" id="elt1">My dynamic content</div>
+        <div class="element" id="elt2">My dynamic content 2</div>
         <div class="element">Empty</div>
         <div class="element">Empty</div>
         <div class="element">Empty</div>

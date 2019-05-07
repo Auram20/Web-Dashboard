@@ -18,7 +18,7 @@ export default (props) => {
         {
           state.InventoryList.map(inv => <div id={inv.index} class="element" id={inv.id} content={inv.content}>
             {inv.content}
-            <a class="deleteLink"onclick={() => actions.deleteToInvList(props.id)}>Delete</a>
+            <a class="deleteLink"onclick={() => actions.deleteToInvList(inv.id)}>X</a>
           </div>)
         }
       </div>

@@ -34,6 +34,9 @@
   cursor: pointer;
 }
 
+.deleteLink{
+  color: red;
+}
 
 #inventory > button:hover {
   background-color: #4CAF50;

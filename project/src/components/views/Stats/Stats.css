@@ -1,6 +1,13 @@
-.stats{
-  margin-left: 50px;
+.stats, .stats2{
   display: grid;
+}
+
+.stats2{
+  width: auto;
+}
+
+#stats2{
+  margin:auto;
 }
 
 .first{

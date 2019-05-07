@@ -11,8 +11,8 @@ export default (props) => {
   const pv = classPoint + conCharPoint + conRacePoint
 
   return (
-    <div class='stats'>
-      <div>
+    <div class='stats2'>
+      <div id="stats2">
         <p>PV : <span>{pv}</span></p>
         <p>CA (Armor) : </p>
         <p>CA (Shield) : </p>

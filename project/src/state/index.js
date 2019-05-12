@@ -28,9 +28,10 @@ export default {
   inventory: {
     input: null
   },
-  spells: {
-    input: ''
-  },
   skillList: [],
-  inventoryList: []
+  inventoryList: [],
+  spells: {
+    spellList: new Array(10).fill([]),
+    level: 0
+  }
 }

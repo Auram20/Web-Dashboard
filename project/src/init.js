@@ -58,11 +58,30 @@ const loadEquipment = (state, actions) => {
   }
 }
 
+const loadSpells = (state, actions) => {
+  if (!hasLoaded('spells')(state)) {
+    actions.load({what: 'spells',
+      promise: DnD.getDetailedRessource('spells')
+        .then((items) => {
+          const itemsGrouped = groupBy(items, 'level', (key) => {
+            switch (key) {
+              case (-1):
+                return 0
+              default:
+                return key
+            }
+          })
+          actions.update({data: itemsGrouped, what: 'spells'})
+        })
+    })
+  }
+}
+
 export default (state, actions) => {
   loadEquipment(state, actions)
   loadClasses(state, actions)
   loadCategory('races', state, actions)
   loadCategory('ability-scores', state, actions)
-  loadCategory('spells', state, actions)
+  loadSpells(state, actions)
   loadCategory('skills', state, actions)
 }

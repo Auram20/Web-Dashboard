@@ -33,7 +33,7 @@ export default {
     return ({...state, character: {...state.character, [what]: value}})
   },
   updateClasse: (value) => (state) => {
-    return ({...state, character: {...state.character, classe: value}, skillList: []})
+    return ({...state, character: {...state.character, classe: value}, skillList: [], spells: {...state.spells, spellList: new Array(10).fill([])}})
   },
   changeLevel: (e) => (state) => ({...state, character: {...state.character, level: clamp(e.target.min, e.target.max, e.target.value)}}),
   changeStat: ({event, key}) => (state) => ({...state, stats: {...state.stats, [key]: clamp(event.target.min, event.target.max, event.target.value) - event.target.min}}),
@@ -52,11 +52,30 @@ export default {
     return {...state, [what]: {...state[what], input: event.target.textContent, value: event.target.dataset.value}}
   },
   addToSkillList: (id) => state => {
+    if (state.skillList.indexOf(id) !== -1) {
+      return state
+    }
     const list = [...state.skillList, id]
     return {...state, skillList: list}
   },
   removeFromSkillList: id => state => {
     const list = state.skillList.filter(itemId => itemId !== id)
     return {...state, skillList: list}
+  },
+  changeSpellTab: lvl => state => ({...state, spells: {...state.spells, level: lvl}}),
+  addToSpellList: id => state => {
+    if (state.spells.spellList[state.spells.level].indexOf(id) !== -1) {
+      return state
+    }
+    const spellList = state.spells.spellList
+    const list = [...spellList[state.spells.level], id]
+    const newState = {...state, spells: {...state.spells, spellList: [...spellList.slice(0, state.spells.level), list, ...spellList.slice(state.spells.level + 1, 10)]}}
+    console.log(newState)
+    return newState
+  },
+  removeFromSpellList: id => state => {
+    const spellList = state.spells.spellList
+    const list = spellList[state.spells.level].filter(itemId => itemId !== id)
+    return {...state, spells: {...state.spells, spellList: [...spellList.slice(0, state.spells.level), list, ...spellList.slice(state.spells.level + 1, 10)]}}
   }
 }

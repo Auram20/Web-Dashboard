@@ -70,7 +70,7 @@ export default (state, actions) => {
       <Stats state={state}/>
       <Skills state={state} actions={actions}/>
       <Inventory state={state} actions={actions} />
-      <Spells state={state}/>
+      <Spells state={state} actions={actions} />
     </main>
   )
 }

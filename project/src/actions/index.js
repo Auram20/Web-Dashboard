@@ -42,10 +42,18 @@ export default {
     return {...state, inventoryList: list}
   },
   deleteToInvList: id => state => {
-    const list = state.inventoryList.filter(todo => todo.id !== id)
+    const list = state.inventoryList.filter(item => item.id !== id)
     return {...state, inventoryList: list}
   },
   clickSearchInput: ({event, what}) => (state) => {
     return {...state, [what]: {...state[what], input: event.target.textContent, value: event.target.dataset.value}}
+  },
+  addToSkillList: (id) => state => {
+    const list = [...state.skillList, id]
+    return {...state, skillList: list}
+  },
+  removeFromSkillList: id => state => {
+    const list = state.skillList.filter(itemId => itemId !== id)
+    return {...state, skillList: list}
   }
 }

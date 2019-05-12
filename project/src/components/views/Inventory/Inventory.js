@@ -19,9 +19,9 @@ export default (props) => {
 
   const firstWeaponWeight = firstWeapon ? firstWeapon.weight : 0
   const secondWeaponWeight = secondWeapon ? secondWeapon.weight : 0
-  const armorWeaponWeight = armor ? armor.weight : 0
+  const armorWeight = armor ? armor.weight : 0
 
-  const weight = weightInv + firstWeaponWeight + secondWeaponWeight + armorWeaponWeight
+  const weight = weightInv + firstWeaponWeight + secondWeaponWeight + armorWeight
 
   return (
     <div id="inventory">

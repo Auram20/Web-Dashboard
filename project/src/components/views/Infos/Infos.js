@@ -25,7 +25,7 @@ export default (props) => {
       <Class
         reload={actions.reload}
         state={state}
-        onchange={(e) => actions.updateCharacter({what: 'classe', value: e.target.value})}
+        onchange={(e) => actions.updateClasse(e.target.value)}
       >Class</Class>
       <Weapon actions={actions} state={state} what={'weapon1'}>Main Hand</Weapon>
       <Weapon actions={actions} state={state} what={'weapon2'}>Secondary Hand</Weapon>

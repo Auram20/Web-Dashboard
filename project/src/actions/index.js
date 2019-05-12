@@ -32,6 +32,9 @@ export default {
   updateCharacter: ({what, value}) => (state) => {
     return ({...state, character: {...state.character, [what]: value}})
   },
+  updateClasse: (value) => (state) => {
+    return ({...state, character: {...state.character, classe: value}, skillList: []})
+  },
   changeLevel: (e) => (state) => ({...state, character: {...state.character, level: clamp(e.target.min, e.target.max, e.target.value)}}),
   changeStat: ({event, key}) => (state) => ({...state, stats: {...state.stats, [key]: clamp(event.target.min, event.target.max, event.target.value) - event.target.min}}),
   addToInvList: () => state => {

@@ -7,7 +7,7 @@ export default (category) => (props, children) => {
 
   return (
     <select id={category} onchange={onchange}>
-      <option value='' selected disabled hidden>{children}</option>
+      <option value={null} selected disabled hidden>{children}</option>
       {items}
     </select>
   )

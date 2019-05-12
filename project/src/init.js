@@ -38,11 +38,14 @@ const loadEquipment = (state, actions) => {
     actions.load({what: 'equipment',
       promise: DnD.getEquipment()
         .then((items) => {
-          const groups = groupBy(items, 'equipment_category', (key) => {
+          const groups = groupBy(items, 'equipment_category', (key, item) => {
             switch (key) {
               case ('Weapon'):
                 return 'weapons'
               case ('Armor'):
+                if (item.name === 'Shield') {
+                  return 'weapons'
+                }
                 return 'armors'
               default:
                 return 'inventory'

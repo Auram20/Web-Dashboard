@@ -1,7 +1,7 @@
 export const groupBy = (arr, key, transform = (key) => key) => {
   return arr.reduce((acc, item) =>
     item[key]
-      ? {...acc, [transform(item[key])]: acc[transform(item[key])] ? [...acc[transform(item[key])], item] : [item]}
+      ? {...acc, [transform(item[key], item)]: acc[transform(item[key], item)] ? [...acc[transform(item[key], item)], item] : [item]}
       : acc,
   {}
   )

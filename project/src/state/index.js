@@ -14,19 +14,22 @@ export default {
   },
   stats: initStat(new Array(6).fill(0)),
   armor: {
-    input: ''
+    input: '',
+    value: null
   },
   weapon1: {
-    input: ''
+    input: '',
+    value: null
   },
   weapon2: {
-    input: ''
+    input: '',
+    value: null
   },
   inventory: {
-    input: ''
+    input: null
   },
   spells: {
     input: ''
   },
-  InventoryList: []
+  inventoryList: []
 }

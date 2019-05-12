@@ -1,4 +1,4 @@
-div 
+div
 {
  font-size: 10px;
  margin : 10px;
@@ -11,12 +11,16 @@ div > .searchInput {
 
 .inputResults {
   display: none;
+}
+
+.inputResults > a {
   background: #DFE6E1;
   margin: 0;
   margin-left: 10px;
   height: 15px;
+  display: block;
 }
 
-input:focus + .inputResults, input:focus + .inputResults + .inputResults, input:focus + .inputResults + .inputResults + .inputResults { 
-  display: block; 
+.searchInput:focus-within > .inputResults, .inputResults:hover {
+  display: block;
 }

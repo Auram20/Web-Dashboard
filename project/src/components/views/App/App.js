@@ -50,10 +50,22 @@ export default (state, actions) => {
       ...skillsBarTemplate.options,
       scales: {
         yAxes: [{
+          gridLines: {
+            color: "#FFFFFF"
+          },
           ticks: {
+            fontColor: "white",
             min: 0,
             max: 1,
             stepSize: 0.1
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            color: "#FFFFFF"
+          },
+          ticks: {
+            fontColor: "white"
           }
         }]
       }

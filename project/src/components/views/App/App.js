@@ -28,11 +28,6 @@ export default (state, actions) => {
 
   const specs = state.character.race ? state.bdd.races[state.character.race]['ability_bonuses'] : new Array(6).fill(0)
 
-  const specsCharacter = {
-    labels: abilityBasis,
-    values: specs
-  }
-
   const allStatsCharacter = {
     labels: abilityBasis,
     values: operateAll([Object.values(stats), Object.values(charStats), specs])
@@ -75,9 +70,8 @@ export default (state, actions) => {
   return (
     <main>
       <Infos state={state} actions={actions}/>
-      <Charts key={0} chart={barTemplate(specsCharacter, 'Specs')} id="chart1"/>
-      <Charts key={1} chart={radarTemplate(allStatsCharacter, 'Stats')} id="chart2"/>
-      <Charts key={3} chart={skillsChart} id="chart3"/>
+      <Charts chart={radarTemplate(allStatsCharacter, 'Stats')} id="chart2"/>
+      <Charts chart={skillsChart} id="chart3"/>
       <Specs state={state} changeStat={actions.changeStat} />
       <Stats state={state}/>
       <Skills state={state} actions={actions}/>

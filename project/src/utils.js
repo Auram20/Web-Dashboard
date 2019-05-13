@@ -102,8 +102,8 @@ export const barTemplate = (data, text) => ({
         ticks: {
           fontColor: '#026670',
           min: 0,
-          max: 5,
-          stepSize: 1
+          max: 20,
+          stepSize: 5
         }
       }],
       xAxes: [{
@@ -148,8 +148,8 @@ export const radarTemplate = (data, text) => ({
       ticks: {
         fontColor: '#026670',
         min: 0,
-        max: 60,
-        stepSize: 10
+        max: 20,
+        stepSize: 5
       }
     }
   }

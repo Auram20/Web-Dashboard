@@ -1,6 +1,7 @@
 import { h } from 'hyperapp'
 import './Stats.css'
-import {indexOfStat, clampRight} from '../../../utils'
+import {indexOfStat, clampRight, barTemplate} from '../../../utils'
+import Charts from '../Charts/Charts.js'
 
 const isShield = (weapon) => {
   if (weapon) {
@@ -39,8 +40,14 @@ export default (props) => {
   const shield = isShield(firstWeapon) || isShield(secondWeapon) ? 2 : 0
   const armorClassValue = armorValue(armor, dexRacePoint + dexCharPoint)
 
+  const specsCharacter = {
+    labels: ['PV', 'CA Armor', 'CA Shield'],
+    values: [pv, armorClassValue, shield]
+  }
+
   return (
     <div class='stats2'>
+      <Charts chart={barTemplate(specsCharacter, 'Specs')} id="chart1"/>
       <div id="stats2">
         <p>PV : <span>{pv}</span></p>
         <p>CA (Armor) : <span>{armorClassValue}</span></p>

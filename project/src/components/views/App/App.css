@@ -14,8 +14,10 @@ body {
 }
 
 main {
+  width: 100%;
+  height: 100%;
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 0.5fr 0.5fr;
 }
 
@@ -66,4 +68,3 @@ p {
 .sub[disabled] {
   opacity: .5;
 }
-

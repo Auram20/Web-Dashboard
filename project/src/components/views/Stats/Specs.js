@@ -1,6 +1,6 @@
 import { h } from 'hyperapp'
 import './Stats.css'
-import {getLevelPointsFromClass, initStat} from '../../../utils'
+import {getLevelPointsFromClass, initStat, clampRight} from '../../../utils'
 
 export default (props) => {
   const {state, changeStat} = props
@@ -20,7 +20,7 @@ export default (props) => {
           value={(stats[key] + character.stats[key] + statsRace[key])}
           onchange={(e) => changeStat({key: key, event: e})}
           min={character.stats[key] + statsRace[key]}
-          max={stats[key] + character.stats[key] + total + statsRace[key]}
+          max={clampRight(stats[key] + character.stats[key] + total + statsRace[key], 20)}
         />
         {statsRace[key] !== 0 && <p>dont +{statsRace[key]}</p>}
       </label>

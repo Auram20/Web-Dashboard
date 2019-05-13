@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Work+Sans');
+
+#h3
+{
+  font-family: 'Work Sans', sans-serif;
+}
+
 div#info
 {
     display: flex;
@@ -7,8 +14,71 @@ div#info
     grid-row: 1 / 3;
 }
 
+
 #info input, #info select
 {
     width: 100px;
     margin: 10px;
+    border-radius: .25em;
 }
+
+::placeholder{
+  color: #fff;
+}
+
+  /* Reset Select */
+  select, input, #search{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #802BB1;
+    color: #fff;
+    background-image: none;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .selectn, #info > input {
+    position: relative;
+    display: flex;
+    height: 3em;
+    line-height: 3;
+    background: #802BB1;
+    overflow: hidden;
+    border-radius: .25em;
+    color: #fff;
+  }
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }
+  
+  #avatar{
+    height: 120px;
+  }

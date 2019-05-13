@@ -5,10 +5,12 @@ export default (props) => {
   const {state, actions} = props
   const {character, bdd} = state
 
-  const proficiencyChoices = character.classe ? bdd.classes[character.classe].proficiency_choices[0] : null
+  const proficiencyChoices = character.classe ? bdd.classes[character.classe].proficiency_choices : null
 
-  const choiceNumber = proficiencyChoices ? proficiencyChoices.choose : 0
-  const skillsClass = proficiencyChoices ? proficiencyChoices.from.map((skill) => skill.name.replace('Skill: ', '')) : []
+  const skillProfChoices = proficiencyChoices ? proficiencyChoices.find(({from}) => from[0].name.indexOf('Skill: ') !== -1) : null
+
+  const choiceNumber = skillProfChoices ? skillProfChoices.choose : 0
+  const skillsClass = skillProfChoices ? skillProfChoices.from.map((skill) => skill.name.replace('Skill: ', '')) : []
 
   const indexedSkills = bdd.skills.length ? bdd.skills.map((item, index) => ({item, index})) : []
   const skills = indexedSkills.length ? indexedSkills.filter(({item}) => skillsClass.indexOf(item.name) !== -1) : []

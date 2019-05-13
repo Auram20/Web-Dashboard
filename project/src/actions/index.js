@@ -38,7 +38,7 @@ export default {
   changeLevel: (e) => (state) => ({...state, character: {...state.character, level: clamp(e.target.min, e.target.max, e.target.value)}}),
   changeStat: ({event, key}) => (state) => ({...state, stats: {...state.stats, [key]: clamp(event.target.min, event.target.max, event.target.value) - event.target.min}}),
   addToInvList: () => state => {
-    if (state.inventory.input === null || state.inventoryList.filter((inv) => inv.value === state.inventory.input).length) {
+    if (state.inventory.input === null) {
       return state
     }
     const list = [...state.inventoryList, makeInvList(state.inventory.input)]

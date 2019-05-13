@@ -3,7 +3,7 @@ import Chart from 'chart.js'
 import './Charts.css'
 
 export default (props) => {
-  const {chart} = props
+  const {chart, id} = props
 
   if (!chart) {
     return null
@@ -27,7 +27,7 @@ export default (props) => {
   }
 
   return (
-    <div className={'charts'}>
+    <div className={'charts'} id={id}>
       <canvas width={500} height={500} oncreate={onLoad} onupdate={onUpdate} />
     </div>
   )

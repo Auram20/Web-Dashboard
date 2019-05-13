@@ -33,10 +33,13 @@ export default (props) => {
         {secondWeaponDiv}
         {armorDiv}
         {
-          inventoryList.map(inv => <div id={inv.index} className="element" id={inv.id}>
-            {bdd.inventory[inv.value].name}
-            <a className="deleteLink" onclick={() => actions.deleteToInvList(inv.id)}>X</a>
-          </div>)
+          inventoryList.map((inv, index) => inventoryList.map((item) => item.value).indexOf(inv.value) === index
+            ? <div id={inv.index} className="element" id={inv.id}>
+              {bdd.inventory[inv.value].name}  x {inventoryList.filter((item) => item.value === inv.value).length}
+              <a className="deleteLink" onclick={() => actions.deleteToInvList(inv.id)}>X</a>
+            </div>
+            : null
+          )
         }
       </div>
       <p>Weight : <span>{weight}</span></p>

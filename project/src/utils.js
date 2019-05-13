@@ -91,27 +91,27 @@ export const barTemplate = (data, text) => ({
     },
     title: {
       display: text,
-      fontColor: "white",
+      fontColor: 'white',
       text: text
     },
     scales: {
       yAxes: [{
         gridLines: {
-          color: "#FFFFFF"
+          color: '#FFFFFF'
         },
         ticks: {
-          fontColor: "white",
+          fontColor: 'white',
           min: 0,
-          max: 5,
-          stepSize: 1
+          max: 20,
+          stepSize: 5
         }
       }],
       xAxes: [{
         gridLines: {
-          color: "#FFFFFF"
+          color: '#FFFFFF'
         },
         ticks: {
-          fontColor: "white"
+          fontColor: 'white'
         }
       }]
     }
@@ -134,23 +134,23 @@ export const radarTemplate = (data, text) => ({
       display: false
     },
     title: {
-      fontColor: "white",
+      fontColor: 'white',
       display: text,
       text: text
     },
     scale: {
       gridLines: {
-        color: "#FFFFFF"
+        color: '#FFFFFF'
       },
-      angleLines: { 
+      angleLines: {
         color: 'purple'
       },
       ticks: {
-        fontColor: "white",
+        fontColor: 'white',
         min: 0,
-        max: 60,
-        stepSize: 10
-      } 
+        max: 20,
+        stepSize: 5
+      }
     }
   }
 })

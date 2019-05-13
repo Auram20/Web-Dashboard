@@ -51,10 +51,10 @@ export default (state, actions) => {
       scales: {
         yAxes: [{
           gridLines: {
-            color: "#FFFFFF"
+            color: '#FFFFFF'
           },
           ticks: {
-            fontColor: "white",
+            fontColor: 'white',
             min: 0,
             max: 1,
             stepSize: 0.1
@@ -62,10 +62,10 @@ export default (state, actions) => {
         }],
         xAxes: [{
           gridLines: {
-            color: "#FFFFFF"
+            color: '#FFFFFF'
           },
           ticks: {
-            fontColor: "white"
+            fontColor: 'white'
           }
         }]
       }

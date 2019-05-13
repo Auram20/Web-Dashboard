@@ -1,6 +1,7 @@
 import './Infos.css'
 import { h } from 'hyperapp'
 import Select from '../../Select/Select'
+import Avatar from '../Avatar/Avatar'
 import SearchInput from '../../SearchInput/SearchInput.js'
 
 export default (props) => {
@@ -13,7 +14,7 @@ export default (props) => {
   return (
     <div id='info'>
       <h3> 's Personal Space</h3>
-      <img src="https://i.pinimg.com/originals/43/f0/7b/43f07ba7e4c61b39a9492dbf2a825569.png" id="avatar" alt="Logo" />
+      <Avatar state={state}/>
       <input type="text" name="title" placeholder="Name " id="name" />
       <input type="number" name="title" placeholder="Level " min={1} max={20} value={state.character.level} onchange={actions.changeLevel} />
 

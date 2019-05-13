@@ -14,7 +14,7 @@ export default (props) => {
   const skills = indexedSkills.length ? indexedSkills.filter(({item}) => skillsClass.indexOf(item.name) !== -1) : []
 
   const skillItems = skills.map(({item, index}) => {
-    const button = state.skillList.indexOf(index) !== -1 ? <span onclick={() => actions.removeFromSkillList(index)}>-</span> : <span onclick={() => actions.addToSkillList(index)}>+</span>
+    const button = state.skillList.indexOf(index) !== -1 ? <button class="SkillsButton" onclick={() => actions.removeFromSkillList(index)}>-</button> : <button class="SkillsButton" onclick={() => actions.addToSkillList(index)}>+</button>
     const className = state.skillList.indexOf(index) !== -1 ? 'enabled' : 'disabled'
     return <div className={'SkillItem ' + className} data-value={index} key={index}>{item.name} {button}</div>
   })

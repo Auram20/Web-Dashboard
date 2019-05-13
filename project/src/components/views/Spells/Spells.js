@@ -6,7 +6,7 @@ export default (props) => {
   const {character, spells, bdd} = state
   const {level, spellList} = spells
 
-  const spellTabs = new Array(9).fill(0).map((item, index) => <span onclick={() => actions.changeSpellTab(index + 1)}>lvl {index + 1}</span>)
+  const spellTabs = new Array(9).fill(0).map((item, index) => <button class="SpellsButton" onclick={() => actions.changeSpellTab(index + 1)}> {index + 1}</button>)
 
   const indexedSpells = bdd.spells ? bdd.spells[level].map((item, index) => ({item, index})) : []
   const spellForClass = indexedSpells.length && character.classe
@@ -24,7 +24,7 @@ export default (props) => {
     <div id="spells">
       SPELLS
       <nav>
-        <span onclick={() => actions.changeSpellTab(0)}>Cantrips</span>
+        <button class="SpellsButton2" onclick={() => actions.changeSpellTab(0)}>Cantrips</button>
         {spellTabs}
       </nav>
       {spellItems.length ? spellItems : <div>No Spell Available</div>}

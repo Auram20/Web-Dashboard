@@ -21,3 +21,24 @@
   grid-column: 4;
   grid-row: 3;
 }
+
+
+.SpellsButton, .SpellsButton2 {
+  width: 5em;
+  height :1em !important; 
+  font-size: 15px;
+  border-radius: 25px;
+  background-color: #34495e;
+  cursor: pointer;
+  line-height: 1em;
+  color : white;
+  padding: 0 0rem;
+}
+.SpellsButton {
+  width:1em !important;
+}
+
+.SpellsButton:hover{
+  background-color: #4CAF50;
+  color: white;
+}

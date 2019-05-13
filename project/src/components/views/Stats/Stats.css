@@ -26,6 +26,22 @@ p{
 #skillsArea{
   border-style: solid;
   border-width: 1px;
-  width: 300px;
-  height: 100px;
+  width: 400px;
+}
+
+.SkillsButton {
+  width:1em !important;
+  height :1em !important; 
+  font-size: 15px;
+  line-height: 1em;
+  border-radius: 25px;
+  background-color: #34495e;
+  cursor: pointer;
+  color : white;
+  padding: 0 0rem;
+}
+
+.SkillsButton:hover{
+  background-color: #4CAF50;
+  color: white;
 }

@@ -19,6 +19,11 @@ div > .searchInput {
   margin-left: 10px;
   height: 15px;
   display: block;
+  cursor: pointer;
+}
+
+.inputResults >a:hover {
+  background: rgb(132, 136, 133);
 }
 
 .searchInput:focus-within > .inputResults, .inputResults:hover {

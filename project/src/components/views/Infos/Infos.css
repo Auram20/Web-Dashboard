@@ -23,7 +23,7 @@ div#info
 }
 
 ::placeholder{
-  color: #fff;
+  color: black;
 }
 
   /* Reset Select */
@@ -35,8 +35,8 @@ div#info
     outline: 0;
     box-shadow: none;
     border: 0 !important;
-    background: #802BB1;
-    color: #fff;
+    background: #9FEDD7;
+    color: black;
     background-image: none;
   }
   /* Remove IE arrow */
@@ -49,15 +49,15 @@ div#info
     display: flex;
     height: 3em;
     line-height: 3;
-    background: #802BB1;
+    background: #9FEDD7;
     overflow: hidden;
     border-radius: .25em;
-    color: #fff;
+    color: black;
   }
   select {
     flex: 1;
     padding: 0 .5em;
-    color: #fff;
+    color: black;
     cursor: pointer;
   }
   /* Arrow */

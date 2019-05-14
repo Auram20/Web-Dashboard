@@ -13,7 +13,7 @@ export default (props) => {
 
   return (
     <div id='info'>
-      <h3> 's Personal Space</h3>
+      <h3> D&D CHARACTER SHEET</h3>
       <Avatar state={state}/>
       <input type="text" name="title" placeholder="Name " id="name" />
       <input type="number" name="title" placeholder="Level " min={1} max={20} value={state.character.level} onchange={actions.changeLevel} />
@@ -31,7 +31,7 @@ export default (props) => {
       <Weapon actions={actions} state={state} what={'weapon1'} id="search">Main Hand</Weapon>
       <Weapon actions={actions} state={state} what={'weapon2'} id="search">Secondary Hand</Weapon>
       <Armor actions={actions} state={state} what={'armor'} id="search">Armor</Armor>
-
+      <img src="https://www.iconsdb.com/icons/preview/white/printer-xxl.png" id="printicon" onclick={() => window.print()} > </img>
     </div>
   )
 }

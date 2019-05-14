@@ -15,6 +15,7 @@ div > .searchInput {
 
 .inputResults > a {
   background: #DFE6E1;
+  color : black;
   margin: 0;
   margin-left: 10px;
   height: 15px;

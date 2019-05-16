@@ -20,10 +20,8 @@ export default (props) => {
   })
 
   return (
-    <div>
       <div id="skillsArea">
         {skillItems}
-      </div>
     </div>
   )
 }

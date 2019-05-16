@@ -68,3 +68,17 @@ p {
 .sub[disabled] {
   opacity: .5;
 }
+#charts1 {
+	grid-colums : 6 / 7;
+	grid-row : 1;
+}
+
+#charts2 {
+	grid-colums : 2 / 3;
+	grid-row : 1;
+}
+
+#charts3 {
+	grid-colums : 4 / 5;
+	grid-row : 1;
+}

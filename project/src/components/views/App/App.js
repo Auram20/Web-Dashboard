@@ -72,8 +72,8 @@ export default (state, actions) => {
       <Infos state={state} actions={actions}/>
       <Charts chart={radarTemplate(allStatsCharacter, 'Stats')} id="chart2"/>
       <Charts chart={skillsChart} id="chart3"/>
-      <Specs state={state} changeStat={actions.changeStat} />
       <Stats state={state}/>
+      <Specs state={state} changeStat={actions.changeStat} />
       <Skills state={state} actions={actions}/>
       <Inventory state={state} actions={actions} />
       <Spells state={state} actions={actions} />

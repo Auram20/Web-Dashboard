@@ -41,3 +41,20 @@ p{
   grid-column: 4 / 5;
   grid-row: 2;
 }
+
+.SkillsButton {
+  width:1em !important;
+  height :1em !important; 
+  font-size: 15px;
+  line-height: 1em;
+  border-radius: 25px;
+  background-color: #34495e;
+  cursor: pointer;
+  color : white;
+  padding: 0 0rem;
+}
+
+.SkillsButton:hover{
+  background-color: #4CAF50;
+  color: white;
+}

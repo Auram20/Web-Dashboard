@@ -15,9 +15,46 @@
 #spells{
   padding: 5px;
   border-style: solid;
-  border-width: 3px;
+  border-width: 1px;
   width : 270px;
   height : 200px;
   grid-column: 5 / 7;
   grid-row: 3;
+}
+
+.Spell.enabled, .Spell.disabled{
+  height: 20px;
+  border-radius: 20px;
+  padding: 1px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-grid;
+}
+
+.Spell.enabled{
+  background-color: rgba(33, 247, 33, 0.425);
+}
+
+.Spell.disabled{
+  background-color: rgba(247, 57, 32, 0.425);
+}
+
+.SpellsButton, .SpellsButton2 {
+  width: 5em;
+  height :1em !important; 
+  font-size: 15px;
+  border-radius: 25px;
+  background-color: #34495e;
+  cursor: pointer;
+  line-height: 1em;
+  color : white;
+  padding: 0 0rem;
+}
+.SpellsButton {
+  width:1em !important;
+}
+
+.SpellsButton:hover{
+  background-color: #4CAF50;
+  color: white;
 }

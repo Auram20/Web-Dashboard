@@ -51,7 +51,7 @@ export const clampRight = (a, b) => parseInt(parseInt(a) < parseInt(b) ? a : b)
 export const clamp = (a, b, c) => clampRight(b, clampLeft(a, c))
 
 export const initStat = (arr) => {
-  if (!(arr instanceof Array)) {
+  if (!(arr instanceof Array) || arr.length !== 6) {
     return initStat(new Array(6).fill(0))
   }
 
@@ -154,3 +154,42 @@ export const radarTemplate = (data, text) => ({
     }
   }
 })
+
+export const isShield = (weapon) => {
+  if (weapon) {
+    return weapon.name === 'Shield'
+  }
+  return false
+}
+
+export const armorValue = (armor, dexValue = 0) => {
+  if (armor) {
+    const armorClass = armor.armor_class
+    const base = parseInt(armorClass.base)
+    if (armorClass.dex_bonus) {
+      return base + clampRight(dexValue, armorClass.max_bonus === null ? 1000 : armorClass.max_bonus)
+    }
+    return base
+  }
+  return 0
+}
+
+export const getStats = (state) => {
+  const {character, bdd} = state
+  const conRacePoint = character.race ? bdd.races[character.race]['ability_bonuses'][indexOfStat('CON')] : 0
+  const classPoint = character.classe ? bdd.classes[character.classe].hit_die : 0
+  const conCharPoint = character.stats['CON'] + state.stats['CON']
+  const pv = classPoint + conCharPoint + conRacePoint
+
+  const dexRacePoint = character.race ? bdd.races[character.race]['ability_bonuses'][indexOfStat('DEX')] : 0
+  const dexCharPoint = character.stats['DEX'] + state.stats['DEX']
+
+  const firstWeapon = state.weapon1.value ? bdd.weapons[state.weapon1.value] : null
+  const secondWeapon = state.weapon2.value ? bdd.weapons[state.weapon2.value] : null
+  const armor = state.armor.value ? bdd.armors[state.armor.value] : null
+
+  const shield = isShield(firstWeapon) || isShield(secondWeapon) ? 2 : 0
+  const armorClassValue = armorValue(armor, dexRacePoint + dexCharPoint)
+
+  return ({pv, armorClassValue, shield})
+}

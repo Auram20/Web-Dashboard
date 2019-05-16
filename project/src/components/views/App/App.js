@@ -8,7 +8,7 @@ import Spells from '../Spells/Spells'
 import './App.css'
 import { h } from 'hyperapp'
 import init from '../../../init.js'
-import {barTemplate, radarTemplate, operateAll, operate, indexOfStat} from '../../../utils'
+import {barTemplate, radarTemplate, operateAll, operate, indexOfStat, getStats} from '../../../utils'
 
 const abilityBasis = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']
 
@@ -25,7 +25,7 @@ export default (state, actions) => {
 
   const {stats} = state
   const charStats = state.character.stats
-
+  const {pv, armorClassValue, shield} = getStats(state)
   const specs = state.character.race ? state.bdd.races[state.character.race]['ability_bonuses'] : new Array(6).fill(0)
 
   const allStatsCharacter = {
@@ -67,11 +67,17 @@ export default (state, actions) => {
     }
   }
 
+  const specsCharacter = {
+    labels: ['PV', 'CA Armor', 'CA Shield'],
+    values: [pv, armorClassValue, shield]
+  }
+
   return (
     <main>
       <Infos state={state} actions={actions}/>
       <Charts chart={radarTemplate(allStatsCharacter, 'Stats')} id="chart2"/>
       <Charts chart={skillsChart} id="chart3"/>
+      <Charts chart={barTemplate(specsCharacter, 'Specs')} id="chart1"/>
       <Stats state={state}/>
       <Specs state={state} changeStat={actions.changeStat} />
       <Skills state={state} actions={actions}/>

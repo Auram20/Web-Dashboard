@@ -27,11 +27,11 @@ export default (props) => {
   const {character, bdd} = state
   const conRacePoint = character.race ? bdd.races[character.race]['ability_bonuses'][indexOfStat('CON')] : 0
   const classPoint = character.classe ? bdd.classes[character.classe].hit_die : 0
-  const conCharPoint = character.stats['CON']
+  const conCharPoint = character.stats['CON'] + state.stats['CON']
   const pv = classPoint + conCharPoint + conRacePoint
 
   const dexRacePoint = character.race ? bdd.races[character.race]['ability_bonuses'][indexOfStat('DEX')] : 0
-  const dexCharPoint = character.stats['DEX']
+  const dexCharPoint = character.stats['DEX'] + state.stats['DEX']
 
   const firstWeapon = state.weapon1.value ? bdd.weapons[state.weapon1.value] : null
   const secondWeapon = state.weapon2.value ? bdd.weapons[state.weapon2.value] : null

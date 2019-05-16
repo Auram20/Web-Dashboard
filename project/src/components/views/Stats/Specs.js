@@ -17,7 +17,7 @@ export default (props) => {
       <label>{key + ' : '}
         <input
           type='number'
-          value={(stats[key] + character.stats[key] + statsRace[key])}
+          value={clampRight(stats[key] + character.stats[key] + statsRace[key], 20)}
           onchange={(e) => changeStat({key: key, event: e})}
           min={character.stats[key] + statsRace[key]}
           max={clampRight(stats[key] + character.stats[key] + total + statsRace[key], 20)}

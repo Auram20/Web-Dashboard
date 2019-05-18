@@ -50,6 +50,7 @@ export default (props) => {
         class="infochild"
         id="search"
         filter={({item}) => canEquip(bdd, character, item) && hasOneHandedWeapon(bdd, state.weapon2.value)}
+        message={!hasOneHandedWeapon(bdd, state.weapon2.value) && <span>Two-Handed Equipped</span>}
       >Main Hand</Weapon>
       <Weapon
         actions={actions}
@@ -58,6 +59,7 @@ export default (props) => {
         class="infochild"
         id="search"
         filter={({item}) => canEquip(bdd, character, item) && hasOneHandedWeapon(bdd, state.weapon1.value)}
+        message={!hasOneHandedWeapon(bdd, state.weapon1.value) && <span>Two-Handed Equipped</span>}
       >Secondary Hand</Weapon>
       <Armor
         actions={actions}

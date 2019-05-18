@@ -3,7 +3,6 @@
 #h3
 {
   font-family: 'Work Sans', sans-serif;
-  
 }
 
 #info
@@ -19,7 +18,8 @@
     color: #ffffff;
 }
 
-#printicon{
+#printicon
+{
   cursor:pointer;
   margin-left: 25%;
   width: 50px;
@@ -33,12 +33,14 @@
     border-radius: .25em;
 }
 
-::placeholder{
+::placeholder
+{
   color: black;
 }
 
   /* Reset Select */
-  select, input, #search{
+select, input, #search
+  {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -50,12 +52,16 @@
     color: black;
     background-image: none;
   }
+
   /* Remove IE arrow */
-  select::-ms-expand {
+select::-ms-expand 
+  {
     display: none;
   }
+
   /* Custom Select */
-  .selectn, #info > input {
+.selectn, #info > input 
+  {
     position: relative;
     display: flex;
     height: 1.5em;
@@ -65,13 +71,17 @@
     border-radius: .25em;
     color: black;
   }
-  select {
+
+select 
+  {
     padding: 0 .5em;
     color: black;
     cursor: pointer;
   }
+
   /* Arrow */
-  .select::after {
+.select::after 
+  {
     content: '\25BC';
     position: absolute;
     top: 0;
@@ -84,11 +94,10 @@
     -o-transition: .25s all ease;
     transition: .25s all ease;
   }
-  /* Transition */
-  .select:hover::after {
+
+/* Transition */
+.select:hover::after 
+  {
     color: #f39c12;
   }
   
-  #avatar{
-    height: 120px;
-  }

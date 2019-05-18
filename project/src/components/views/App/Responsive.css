@@ -3,56 +3,77 @@
   {
    flex-direction: column;
   }
-  #info{
+
+  #info
+  {
     width: 100vw;
     flex-direction: row !important;
     flex-wrap: wrap;
-    
   }
-  .infochild{
+
+  .infochild
+  {
     flex: 1 0 21%;
   }
-  #Infodiv{
+  
+  #Infodiv
+  {
     width: 100vw;
   }
 
-  #printicon{
+  #printicon
+  {
     width: 20px;
     height: 20px;
     margin : 20px !important;
   }
 
-  #avatar{
+  #avatar
+  {
     display: none;
     visibility: hidden;
   }
-  .searchInput{
+
+  .searchInput
+  {
     margin: 2px !important;
   }
-  div {
+
+  div 
+  {
     margin:0;
   }
 
-  #Dashboarddiv {
+  #Dashboarddiv 
+  {
     justify-items: center;
     align-items: center;
   }
 
-  #chart1 {
+  #chart1 
+  {
     order : 1 !important;
   }
-  .stats {
+
+  .stats 
+  {
     order : 2 !important;
   }
-  #chart2 {
+  #chart2 
+  {
     order : 3 !important;
   }
-  #skillsArea{
+
+  #skillsArea
+  {
     order : 4 !important;
   }
-  #chart3 {
+
+  #chart3 
+  {
     order : 5 !important;
   }
+  
   .stats2{
     order : 6 !important;
   }

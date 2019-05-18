@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
-* {
+* 
+{
   box-sizing: border-box;
 }
 
-body {
+body 
+{
   font-family: sans-serif;
   background-image: linear-gradient(to top, #ffffff 0%, #d4d4d4 100%);
   min-height: 100%;
@@ -13,17 +15,20 @@ body {
   color: #8d0000;
 }
 
-main {
+main 
+{
   height : 100%;
   display: flex; 
 }
 
-#Infodiv{
+#Infodiv
+{
   margin: 0;
   flex : 1;
 }
 
-#Dashboarddiv{
+#Dashboarddiv
+{
   width : 100%;
   height : 100%;
   display: grid;
@@ -32,65 +37,77 @@ main {
   flex : 5;
 }
 
-section > *+* {
+section > *+* 
+{
   margin-left: 2rem;
 }
 
-button {
+button 
+{
   padding: 0 1rem;
   border: none;
   font-size: 2rem;
   height: 3rem;
 }
 
-h1 {
+h1 
+{
   font-size: calc(20px + 6vmin);
   margin-top: 0;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-p {
+p 
+{
   text-align: center;
   margin-top: 0;
 }
 
-.count {
+.count 
+{
   margin-top: 0;
   margin-bottom: 0;
   font-size: 4rem;
   color: #FFE9C2;
 }
 
-[disabled] + .count {
+[disabled] + .count 
+{
   color: #999;
 }
 
-.add {
+.add 
+{
   background-color: mediumseagreen;
   color: #DBECFF;
 }
 
-.sub {
+.sub 
+{
   background-color: mediumvioletred;
   color: #DBECFF;
 }
 
-.sub[disabled] {
+.sub[disabled] 
+{
   opacity: .5;
 }
 
-#chart1 {
+#chart1 
+{
   order: 2; 
   flex : 1 0 25%;
 }
 
-#chart2 {
+#chart2 
+{
   order: 3; 
   flex : 1 0 25%;
 }
 
-#chart3 {
+#chart3 
+{
   order: 4; 
   flex : 1 0 25%;
 }

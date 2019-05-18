@@ -1,16 +1,19 @@
-.grid {
+.grid 
+{
   display : grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.element {
+.element 
+{
   margin: 0px;
   padding : 10px;
   border-style: solid;
   border-width: 1px;
 }
 
-#inventory {
+#inventory 
+{
   padding: 5px;
   border-style: solid;
   border-width: 1px;
@@ -19,11 +22,13 @@
   order: 8; 
 }
 
-#inventory > select {
+#inventory > select 
+{
   width: 270px;
 }
 
-#inventory > button, .deleteLink{
+#inventory > button, .deleteLink
+{
   background-color: #656464;
   border-radius: .25em;
   color: #D1D7E0;
@@ -34,11 +39,13 @@
   cursor: pointer;
 }
 
-.deleteLink{
+.deleteLink
+{
   color: red;
 }
 
-#inventory > button:hover {
+#inventory > button:hover 
+{
   background-color: rgba(141,0,0, 1);
   color: white;
 }

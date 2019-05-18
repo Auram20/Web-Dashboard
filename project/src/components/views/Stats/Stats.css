@@ -1,22 +1,26 @@
 
-.stats2{
+.stats2
+{
   order : 7;
   flex : 1 0 25%;
   width: auto;
 
 }
 
-.stats {
+.stats 
+{
   order: 5; 
   flex : 1 0 25%;
   }
 
-#stats2{
+#stats2
+{
   margin:auto;
 }
 
 
-p{
+p
+{
   margin:0px;
   border-style: solid;
   border-width: 1px;
@@ -24,7 +28,8 @@ p{
 
 }
 
-#skillsArea{
+#skillsArea
+{
   border-style: solid;
   border-radius: 5px;
   border-width: 1px;
@@ -34,7 +39,8 @@ p{
   order : 6;
 }
 
-.SkillsButton {
+.SkillsButton 
+{
   width:1em !important;
   height :1em !important; 
   font-size: 15px;
@@ -46,7 +52,8 @@ p{
   padding: 0 0rem;
 }
 
-.SkillsButton:hover{
+.SkillsButton:hover
+{
   background-color: #2b2a2a ;
   color: white;
 }

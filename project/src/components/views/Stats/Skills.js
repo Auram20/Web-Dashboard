@@ -23,6 +23,7 @@ export default (props) => {
 
   return (
     <div id="skillsArea">
+      SKILLS
       {skillItems}
     </div>
   )

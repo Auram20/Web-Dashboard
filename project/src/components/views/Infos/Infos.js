@@ -6,7 +6,9 @@ import SearchInput from '../../SearchInput/SearchInput.js'
 
 const canEquip = (bdd, character, item) => {
   if (character.classe !== null) {
-    return bdd.classes[character.classe].proficiencies.reduce((acc, {name}) => acc || name.indexOf(item['weapon_category:'] || item.armor_category) !== -1, false)
+    const classe = bdd.classes[character.classe]
+    const debugWizard = classe.name === 'Wizard' ? item['weapon_category:'] === 'Simple' : false
+    return classe.proficiencies.reduce((acc, {name}) => acc || name.indexOf(item['weapon_category:'] || item.armor_category) !== -1 || debugWizard, false)
   }
   return false
 }

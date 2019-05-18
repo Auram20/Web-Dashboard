@@ -17,7 +17,8 @@ export default (category) => (props, children) => {
 
   const suggestions = allSuggestions.filter(filter || (() => true)).slice(0, 3).map(({item, index}) => <a key={index} data-value={index} onclick={(e) => actions.clickSearchInput({event: e, what})}>{item.name}</a>)
 
-  const results = suggestions.length > 0 ? suggestions : (message || <span>Choose a class</span>)
+  const warning = state.character.classe === null ? <span>Choose a class</span> : <span>No Item</span>
+  const results = suggestions.length > 0 ? suggestions : (message || warning)
 
   return (
     <div className={category + ' searchInput'}>

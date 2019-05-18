@@ -7,6 +7,7 @@
   #info
   {
     width: 100vw;
+    height: 100%;
     flex-direction: row !important;
     flex-wrap: wrap;
   }
@@ -73,7 +74,7 @@
   {
     order : 5 !important;
   }
-  
+
   .stats2{
     order : 6 !important;
   }

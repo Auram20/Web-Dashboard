@@ -15,6 +15,11 @@ body
   color: #8d0000;
 }
 
+html
+{
+  box-sizing: border-box;
+}
+
 main 
 {
   height : 100%;

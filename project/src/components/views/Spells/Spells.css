@@ -18,8 +18,7 @@
   border-width: 1px;
   width : 270px;
   height : 200px;
-  grid-column: 5 / 7;
-  grid-row: 3;
+  order: 9; 
 }
 
 .Spell.enabled, .Spell.disabled{

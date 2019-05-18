@@ -46,10 +46,10 @@ export default (state, actions) => {
       scales: {
         yAxes: [{
           gridLines: {
-            color: '#026670'
+            color: '#181717'
           },
           ticks: {
-            fontColor: '#026670',
+            fontColor: '#181717',
             min: 0,
             max: 1,
             stepSize: 0.1
@@ -57,10 +57,10 @@ export default (state, actions) => {
         }],
         xAxes: [{
           gridLines: {
-            color: '#026670'
+            color: '#181717'
           },
           ticks: {
-            fontColor: '#026670'
+            fontColor: '#181717'
           }
         }]
       }
@@ -74,15 +74,19 @@ export default (state, actions) => {
 
   return (
     <main>
-      <Infos state={state} actions={actions}/>
-      <Charts chart={radarTemplate(allStatsCharacter, 'Stats')} id="chart2"/>
-      <Charts chart={skillsChart} id="chart3"/>
-      <Charts chart={barTemplate(specsCharacter, 'Specs')} id="chart1"/>
-      <Stats state={state}/>
-      <Specs state={state} changeStat={actions.changeStat} />
-      <Skills state={state} actions={actions}/>
-      <Inventory state={state} actions={actions} />
-      <Spells state={state} actions={actions} />
+      <div id="Infodiv">
+        <Infos state={state} actions={actions}/>
+      </div>
+      <div id="Dashboarddiv">
+        <Charts chart={radarTemplate(allStatsCharacter, 'Stats')} id="chart1"/>
+        <Charts chart={skillsChart} id="chart2"/>
+        <Charts chart={barTemplate(specsCharacter, 'Specs')} id="chart3"/>
+        <Stats state={state}/>
+        <Specs state={state} changeStat={actions.changeStat} />
+        <Skills state={state} actions={actions}/>
+        <Inventory state={state} actions={actions} />
+        <Spells state={state} actions={actions} />
+      </div>
     </main>
   )
 }

@@ -80,7 +80,7 @@ export const barTemplate = (data, text) => ({
     labels: data.labels,
     datasets: [{
       label: 'You',
-      backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#e8c3b9', '#c45850', '#1d15da'],
+      backgroundColor: ['#8d0000', '#181717', '#2b2a2a', '#656464', '#d4d4d4', '#ffffff'],
       borderColor: 'rgb(255, 255, 255)',
       data: data.values
     }]
@@ -91,16 +91,16 @@ export const barTemplate = (data, text) => ({
     },
     title: {
       display: text,
-      fontColor: '#026670',
+      fontColor: '#181717',
       text: text
     },
     scales: {
       yAxes: [{
         gridLines: {
-          color: '#026670'
+          color: '#181717'
         },
         ticks: {
-          fontColor: '#026670',
+          fontColor: '#181717',
           min: 0,
           max: 20,
           stepSize: 5
@@ -108,10 +108,10 @@ export const barTemplate = (data, text) => ({
       }],
       xAxes: [{
         gridLines: {
-          color: '#026670'
+          color: '#181717'
         },
         ticks: {
-          fontColor: '#026670'
+          fontColor: '#181717'
         }
       }]
     }
@@ -124,7 +124,7 @@ export const radarTemplate = (data, text) => ({
     labels: data.labels,
     datasets: [{
       label: 'You',
-      backgroundColor: '#FCE181',
+      backgroundColor: '#8d0000',
       borderColor: 'rgb(255, 255, 255)',
       data: data.values
     }]
@@ -134,19 +134,19 @@ export const radarTemplate = (data, text) => ({
       display: false
     },
     title: {
-      fontColor: '#026670',
+      fontColor: '#181717',
       display: text,
       text: text
     },
     scale: {
       gridLines: {
-        color: '#026670'
+        color: '#181717'
       },
       angleLines: {
-        color: '#026670'
+        color: '#181717'
       },
       ticks: {
-        fontColor: '#026670',
+        fontColor: '#181717',
         min: 0,
         max: 20,
         stepSize: 5

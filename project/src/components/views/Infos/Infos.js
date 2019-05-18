@@ -15,22 +15,22 @@ export default (props) => {
     <div id='info'>
       <h3> D&D CHARACTER SHEET</h3>
       <Avatar state={state}/>
-      <input type="text" name="title" placeholder="Name " id="name" />
-      <input type="number" name="title" placeholder="Level " min={1} max={20} value={state.character.level} onchange={actions.changeLevel} />
+      <input type="text" name="title" placeholder="Name " id="name" class="infochild" />
+      <input type="number" name="title" class="infochild" placeholder="Level " min={1} max={20} value={state.character.level} onchange={actions.changeLevel} />
 
       <Races
         reload={actions.reload}
-        state={state}
+        state={state} class="infochild"
         onchange={(e) => actions.updateCharacter({what: 'race', value: e.target.value})}
       >Races</Races>
       <Class
         reload={actions.reload}
-        state={state}
+        state={state} class="infochild"
         onchange={(e) => actions.updateClasse(e.target.value)}
       >Class</Class>
-      <Weapon actions={actions} state={state} what={'weapon1'} id="search">Main Hand</Weapon>
-      <Weapon actions={actions} state={state} what={'weapon2'} id="search">Secondary Hand</Weapon>
-      <Armor actions={actions} state={state} what={'armor'} id="search">Armor</Armor>
+      <Weapon actions={actions} state={state} what={'weapon1'} class="infochild" id="search">Main Hand</Weapon>
+      <Weapon actions={actions} state={state} what={'weapon2'} class="infochild" id="search">Secondary Hand</Weapon>
+      <Armor actions={actions} state={state} what={'armor'} class="infochild"id="search">Armor</Armor>
       <img src="https://www.iconsdb.com/icons/preview/white/printer-xxl.png" id="printicon" onclick={() => window.print()} > </img>
     </div>
   )

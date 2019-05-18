@@ -35,6 +35,7 @@
 
   #Dashboarddiv {
     justify-items: center;
+    align-items: center;
   }
 
   #chart1 {
@@ -56,3 +57,4 @@
     order : 6 !important;
   }
 }
+

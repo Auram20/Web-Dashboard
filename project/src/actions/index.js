@@ -26,8 +26,11 @@ export default {
       return {...acc, bdd: newBdd, load: newLoad, loading: newLoading}
     },
     state),
-  change: ({event, what}) => (state) => {
-    return ({...state, [what]: {...state[what], input: event.target.value, value: null}})
+  change: ({what}) => (state) => {
+    return ({...state, [what]: {...state[what], value: null}})
+  },
+  keyup: ({event, what}) => (state) => {
+    return ({...state, [what]: {...state[what], input: event.target.value}})
   },
   updateCharacter: ({what, value}) => (state) => {
     return ({...state, character: {...state.character, [what]: value}})

@@ -36,5 +36,23 @@
   #Dashboarddiv {
     justify-items: center;
   }
-  
+
+  #chart1 {
+    order : 1 !important;
+  }
+  .stats {
+    order : 2 !important;
+  }
+  #chart2 {
+    order : 3 !important;
+  }
+  #skillsArea{
+    order : 4 !important;
+  }
+  #chart3 {
+    order : 5 !important;
+  }
+  .stats2{
+    order : 6 !important;
+  }
 }

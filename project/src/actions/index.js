@@ -36,7 +36,14 @@ export default {
     return ({...state, character: {...state.character, [what]: value}})
   },
   updateClasse: (value) => (state) => {
-    return ({...state, character: {...state.character, classe: value}, skillList: [], spells: {...state.spells, spellList: new Array(10).fill([])}})
+    return ({...state,
+      character: {...state.character, classe: value},
+      skillList: [],
+      weapon1: {input: '', value: null},
+      weapon2: {input: '', value: null},
+      armor: {input: '', value: null},
+      spells: {...state.spells, spellList: new Array(10).fill([])}
+    })
   },
   changeLevel: (e) => (state) => ({...state, character: {...state.character, level: clamp(e.target.min, e.target.max, e.target.value)}}),
   changeStat: ({event, key}) => (state) => ({...state, stats: {...state.stats, [key]: clamp(event.target.min, event.target.max, event.target.value) - event.target.min}}),

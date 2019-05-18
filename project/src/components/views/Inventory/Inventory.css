@@ -15,6 +15,7 @@
   border-style: solid;
   border-width: 1px;
   width: 90%;
+  border-radius: 5px;
   order: 8; 
 }
 
@@ -23,7 +24,7 @@
 }
 
 #inventory > button, .deleteLink{
-  background-color: #564F6F;;
+  background-color: #656464;
   border-radius: .25em;
   color: #D1D7E0;
   padding: 0px 2px;
@@ -38,7 +39,7 @@
 }
 
 #inventory > button:hover {
-  background-color: #4CAF50;
+  background-color: rgba(141,0,0, 1);
   color: white;
 }
 

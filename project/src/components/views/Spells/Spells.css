@@ -16,6 +16,7 @@
   padding: 5px;
   border-style: solid;
   border-width: 1px;
+  border-radius: 15px;
   width : 90%;
   height : 100%;
   order: 9; 
@@ -28,14 +29,15 @@
   text-align: center;
   cursor: pointer;
   display: inline-grid;
+  color: white !important;
 }
 
 .Spell.enabled{
-  background-color: rgba(33, 247, 33, 0.425);
+  background-color: rgba(141,0,0, 1);
 }
 
 .Spell.disabled{
-  background-color: rgba(247, 57, 32, 0.425);
+  background-color: rgba(141,0,0, 0.425);
 }
 
 .SpellsButton, .SpellsButton2 {
@@ -43,7 +45,7 @@
   height :1em !important; 
   font-size: 15px;
   border-radius: 25px;
-  background-color: #34495e;
+  background-color: #656464;
   cursor: pointer;
   line-height: 1em;
   color : white;

@@ -94,28 +94,3 @@ p {
   order: 4; 
   flex : 1 0 25%;
 }
-
-
-@media screen and (max-width: 1064px) {
-  main
-  {
-   flex-direction: column;
-  }
-  #info{
-    width: 100vw;
-    flex-direction: row !important;
-  }
-
-  .infochild{
-    flex: 1 0 21%;
-  }
-  #Infodiv{
-    width: 100vw;
-  }
-
-  div {
-    margin:0;
-  }
-
-  
-}

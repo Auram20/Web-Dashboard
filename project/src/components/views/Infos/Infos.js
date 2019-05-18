@@ -31,7 +31,7 @@ export default (props) => {
       <Weapon actions={actions} state={state} what={'weapon1'} class="infochild" id="search">Main Hand</Weapon>
       <Weapon actions={actions} state={state} what={'weapon2'} class="infochild" id="search">Secondary Hand</Weapon>
       <Armor actions={actions} state={state} what={'armor'} class="infochild"id="search">Armor</Armor>
-      <img src="https://www.iconsdb.com/icons/preview/white/printer-xxl.png" id="printicon" onclick={() => window.print()} > </img>
+      <img src="https://flaticons.net/icons/User%20Interface/Print.png" id="printicon" onclick={() => window.print()} > </img>
     </div>
   )
 }

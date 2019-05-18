@@ -27,8 +27,8 @@ p{
 #skillsArea{
   border-style: solid;
   border-width: 1px;
-  width: 100%;
-  height: 100px;
+  width: 90%;
+  height: 100%;
   flex : 1 0 25%;
   order : 6;
 }

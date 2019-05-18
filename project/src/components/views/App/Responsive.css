@@ -1,0 +1,37 @@
+@media screen and (max-width: 1064px) {
+  main
+  {
+   flex-direction: column;
+  }
+  #info{
+    width: 100vw;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    
+  }
+  .infochild{
+    flex: 1 0 21%;
+  }
+  #Infodiv{
+    width: 100vw;
+  }
+
+  #printicon{
+    width: 20px;
+    height: 20px;
+    margin : 20px !important;
+  }
+
+  #avatar{
+    display: none;
+    visibility: hidden;
+  }
+  .searchInput{
+    margin: 2px !important;
+  }
+  div {
+    margin:0;
+  }
+
+  
+}

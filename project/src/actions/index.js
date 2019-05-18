@@ -27,7 +27,7 @@ export default {
     },
     state),
   change: ({event, what}) => (state) => {
-    return ({...state, [what]: {...state[what], input: event.target.value}})
+    return ({...state, [what]: {...state[what], input: event.target.value, value: null}})
   },
   updateCharacter: ({what, value}) => (state) => {
     return ({...state, character: {...state.character, [what]: value}})

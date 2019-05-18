@@ -2,7 +2,7 @@ import './SearchInput.css'
 import { h } from 'hyperapp'
 
 export default (category) => (props, children) => {
-  const {state, actions, what} = props
+  const {state, actions, what, filter} = props
   const bdd = state.bdd[category]
 
   const items = bdd.map((item, index) => ({item, index}))
@@ -15,7 +15,7 @@ export default (category) => (props, children) => {
     })
     : items
 
-  const suggestions = allSuggestions.slice(0, 3).map(({item, index}) => <a key={index} data-value={index} onclick={(e) => actions.clickSearchInput({event: e, what})}>{item.name}</a>)
+  const suggestions = allSuggestions.filter(filter || (() => true)).slice(0, 3).map(({item, index}) => <a key={index} data-value={index} onclick={(e) => actions.clickSearchInput({event: e, what})}>{item.name}</a>)
 
   return (
     <div className={category + ' searchInput'}>

@@ -102,7 +102,7 @@ export const barTemplate = (data, text) => ({
         ticks: {
           fontColor: '#181717',
           min: 0,
-          max: 20,
+          max: 30,
           stepSize: 5
         }
       }],

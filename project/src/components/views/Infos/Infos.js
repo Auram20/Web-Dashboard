@@ -4,8 +4,23 @@ import Select from '../../Select/Select'
 import Avatar from '../Avatar/Avatar'
 import SearchInput from '../../SearchInput/SearchInput.js'
 
+const canEquip = (bdd, character, item) => {
+  if (character.classe !== null) {
+    return bdd.classes[character.classe].proficiencies.reduce((acc, {name}) => acc || name.indexOf(item['weapon_category:'] || item.armor_category) !== -1, false)
+  }
+  return false
+}
+
+const hasOneHandedWeapon = (bdd, equipedWeapon) => {
+  if (equipedWeapon !== null) {
+    return !bdd.weapons[equipedWeapon].properties.find(({name}) => name === 'Two-Handed')
+  }
+  return true
+}
+
 export default (props) => {
   const {state, actions} = props
+  const {bdd, character} = state
   const Races = Select('races')
   const Class = Select('classes')
   const Weapon = SearchInput('weapons')
@@ -28,9 +43,30 @@ export default (props) => {
         state={state} class="infochild"
         onchange={(e) => actions.updateClasse(e.target.value)}
       >Class</Class>
-      <Weapon actions={actions} state={state} what={'weapon1'} class="infochild" id="search">Main Hand</Weapon>
-      <Weapon actions={actions} state={state} what={'weapon2'} class="infochild" id="search">Secondary Hand</Weapon>
-      <Armor actions={actions} state={state} what={'armor'} class="infochild"id="search">Armor</Armor>
+      <Weapon
+        actions={actions}
+        state={state}
+        what={'weapon1'}
+        class="infochild"
+        id="search"
+        filter={({item}) => canEquip(bdd, character, item) && hasOneHandedWeapon(bdd, state.weapon2.value)}
+      >Main Hand</Weapon>
+      <Weapon
+        actions={actions}
+        state={state}
+        what={'weapon2'}
+        class="infochild"
+        id="search"
+        filter={({item}) => canEquip(bdd, character, item) && hasOneHandedWeapon(bdd, state.weapon1.value)}
+      >Secondary Hand</Weapon>
+      <Armor
+        actions={actions}
+        state={state}
+        what={'armor'}
+        class="infochild"
+        id="search"
+        filter={({item}) => canEquip(bdd, character, item)}
+      >Armor</Armor>
       <img src="https://flaticons.net/icons/User%20Interface/Print.png" id="printicon" onclick={() => window.print()} > </img>
     </div>
   )

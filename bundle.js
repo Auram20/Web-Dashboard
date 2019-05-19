@@ -18894,10 +18894,8 @@ var init = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET',
     'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Max-Age': 86400,
-    'Access-Control-Allow-Credentials': true
-  },
-  credentials: 'include'
+    'Access-Control-Max-Age': 86400
+  }
 };
 var proxy = 'https://thingproxy.freeboard.io/fetch/';
 var DnD_getFromURL = function getFromURL(url) {

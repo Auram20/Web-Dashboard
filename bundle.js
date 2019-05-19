@@ -18887,9 +18887,21 @@ if (!self.fetch) {
 // CONCATENATED MODULE: ./src/apiDnD/DnD.js
 
 var baseURL = 'http://dnd5eapi.co/api';
+var init = {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': baseURL,
+    'Access-Control-Allow-Methods': 'GET',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Max-Age': 86400,
+    'Access-Control-Allow-Credentials': true
+  },
+  credentials: 'include'
+};
 var proxy = 'https://thingproxy.freeboard.io/fetch/';
 var DnD_getFromURL = function getFromURL(url) {
-  return fetch(proxy + url).then(function (res) {
+  return fetch(proxy + url, init).then(function (res) {
     if (res.status >= 400) {
       return new Error('Bad response server');
     }
@@ -19062,7 +19074,7 @@ var init_loadSpells = function loadSpells(state, actions) {
   }
 };
 
-/* harmony default export */ var init = (function (state, actions) {
+/* harmony default export */ var src_init = (function (state, actions) {
   init_loadEquipment(state, actions);
   init_loadClasses(state, actions);
   init_loadCategory('races', state, actions);
@@ -19105,7 +19117,7 @@ var App_getSkillAbilities = function getSkillAbilities(bdd, skills) {
 };
 
 /* harmony default export */ var App_App = (function (state, actions) {
-  init(state, actions);
+  src_init(state, actions);
   var stats = state.stats;
   var charStats = state.character.stats;
 

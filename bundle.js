@@ -18893,7 +18893,7 @@ var init = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': baseURL,
     'Access-Control-Allow-Methods': 'GET',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
+    'Access-Control-Allow-Headers': 'Content-Type, X-Custom-Header, Upgrade-Insecure-Requests',
     'Access-Control-Max-Age': 86400,
     'Access-Control-Allow-Credentials': true,
     'Content-Security-Policy': 'upgrade-insecure-requests'

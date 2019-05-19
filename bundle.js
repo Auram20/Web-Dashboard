@@ -18890,7 +18890,11 @@ var baseURL = 'http://dnd5eapi.co/api';
 var init = {
   method: 'GET',
   headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': baseURL,
+    'Access-Control-Allow-Methods': 'GET',
+    'Access-Control-Allow-Headers': 'X-PINGOTHER, Content-Type',
+    'Access-Control-Max-Age': 86400
   },
   credentials: 'include'
 };

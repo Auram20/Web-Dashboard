@@ -87,5 +87,13 @@ export default {
     const spellList = state.spells.spellList
     const list = spellList[state.spells.level].filter(itemId => itemId !== id)
     return {...state, spells: {...state.spells, spellList: [...spellList.slice(0, state.spells.level), list, ...spellList.slice(state.spells.level + 1, 10)]}}
+  },
+  toggle_visibility: id => {
+    const e = document.getElementById(id)
+    if (e.style.display === 'block') {
+      return {...e, style: {...e.style, display: 'none'}}
+    } else {
+      return {...e, style: {...e.style, display: 'block'}}
+    }
   }
 }

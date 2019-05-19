@@ -3,6 +3,8 @@ import Charts from '../Charts/Charts'
 import Specs from '../Stats/Specs'
 import Stats from '../Stats/Stats'
 import Skills from '../Stats/Skills'
+
+import Popup from '../Popup/Popup'
 import Inventory from '../Inventory/Inventory'
 import Spells from '../Spells/Spells'
 import './App.css'
@@ -75,6 +77,7 @@ export default (state, actions) => {
 
   return (
     <main>
+      <Popup />
       <div id="Infodiv">
         <Infos state={state} actions={actions}/>
       </div>

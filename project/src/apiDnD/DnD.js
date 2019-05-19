@@ -3,15 +3,16 @@ import {fetch} from 'whatwg-fetch'
 const baseURL = 'http://dnd5eapi.co/api'
 
 const init = {
-  method: 'GET',
+  /* method: 'GET',
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': baseURL,
     'Access-Control-Allow-Methods': 'GET',
-    'Access-Control-Allow-Headers': 'Content-Type, Origin, X-Auth-Token',
-    'Access-Control-Max-Age': 86400
+    'Access-Control-Allow-Headers': 'Content-Type, Origin, Authorization',
+    'Access-Control-Max-Age': 86400,
+    'Access-Control-Allow-Credentials': true
   },
-  credentials: 'include'
+  credentials: 'include' */
 }
 
 export const getFromURL = (url) => {

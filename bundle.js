@@ -18892,7 +18892,7 @@ var init = {
   headers: {
     'Content-Type': 'application/json'
   },
-  credentials: 'same-origin'
+  credentials: 'include'
 };
 var DnD_getFromURL = function getFromURL(url) {
   return fetch(url, init).then(function (res) {

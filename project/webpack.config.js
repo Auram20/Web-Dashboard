@@ -24,8 +24,7 @@ const config = {
     filename: 'bundle.js',
     library: libraryName,
     libraryTarget: 'umd',
-    umdNamedDefine: true,
-	publicPath: "https://auram20.github.io/Web-Dashboard/"
+    umdNamedDefine: true
   },
   module: {
     rules: [

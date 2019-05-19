@@ -18886,7 +18886,7 @@ if (!self.fetch) {
 
 // CONCATENATED MODULE: ./src/apiDnD/DnD.js
 
-var baseURL = 'https://dnd5eapi.co/api';
+var baseURL = '//dnd5eapi.co/api';
 var init = {
   method: 'GET',
   headers: {

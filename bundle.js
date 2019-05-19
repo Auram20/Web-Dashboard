@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://www.dnddashboard.io/";
+/******/ 	__webpack_require__.p = "http://www.anikmyriam.com/dnddashboard";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 129);
@@ -18886,7 +18886,7 @@ if (!self.fetch) {
 
 // CONCATENATED MODULE: ./src/apiDnD/DnD.js
 
-var baseURL = '//dnd5eapi.co/api';
+var baseURL = 'http://dnd5eapi.co/api';
 var init = {
   method: 'GET',
   headers: {
@@ -18896,7 +18896,7 @@ var init = {
     'Access-Control-Allow-Headers': 'Content-Type, X-Custom-Header, Upgrade-Insecure-Requests',
     'Access-Control-Max-Age': 86400,
     'Access-Control-Allow-Credentials': true,
-    'Content-Security-Policy': 'upgrade-insecure-requests'
+    'Content-Security-Policy': "connect-src ".concat(baseURL)
   },
   credentials: 'include'
 };

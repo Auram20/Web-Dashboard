@@ -1,0 +1,390 @@
+@import url(https://fonts.googleapis.com/css?family=Anton|Work+Sans);@import url(https://fonts.googleapis.com/css?family=Work+Sans);#h3
+{
+  font-family: 'Work Sans', sans-serif;
+  
+}
+
+#info
+{
+    display: flex;
+    flex-direction: column;
+    margin:0px;
+    order: 1; 
+    width: 200px;
+    height: 100%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #8d0000;
+    color: #ffffff;
+}
+
+#printicon{
+  cursor:pointer;
+  margin-left: 25%;
+  width: 50px;
+  height: auto;
+}
+
+#info input, #info select
+{
+    width: 100px;
+    margin: 10px;
+    border-radius: .25em;
+}
+
+::placeholder{
+  color: black;
+}
+
+  /* Reset Select */
+  select, input, #search{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #ffffff;
+    color: black;
+    background-image: none;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .selectn, #info > input {
+    position: relative;
+    display: flex;
+    height: 1.5em;
+    line-height: 3;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: .25em;
+    color: black;
+  }
+  select {
+    padding: 0 .5em;
+    color: black;
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }
+  
+  #avatar{
+    height: 120px;
+  }div
+{
+ font-size: 10px;
+ margin : 10px;
+ width: 100px;
+}
+
+div > .searchInput {
+    margin : 0px;
+}
+
+.inputResults {
+  display: none;
+}
+
+.inputResults > a {
+  background: #DFE6E1;
+  color : black;
+  margin: 0;
+  margin-left: 10px;
+  height: 15px;
+  display: block;
+  cursor: pointer;
+}
+
+.inputResults >a:hover {
+  background: rgb(132, 136, 133);
+}
+
+.searchInput:focus-within > .inputResults, .inputResults:hover {
+  display: block;
+}
+.charts {
+  width : 300px;
+  height: 300px;
+}
+
+.charts canvas {
+  width: 100%;
+  height: 100%;
+}
+
+input{
+  width: 100px;
+}
+
+
+.stats2{
+  order : 7;
+  flex : 1 0 25%;
+  width: auto;
+
+}
+
+.stats {
+  order: 5; 
+  flex : 1 0 25%;
+  }
+
+#stats2{
+  margin:auto;
+}
+
+
+p{
+  margin:0px;
+  border-style: solid;
+  border-width: 1px;
+  width: 100px;
+
+}
+
+#skillsArea{
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 90%;
+  height: 100%;
+  flex : 1 0 25%;
+  order : 6;
+}
+
+.SkillsButton {
+  width:1em !important;
+  height :1em !important; 
+  font-size: 15px;
+  line-height: 1em;
+  border-radius: 25px;
+  background-color: #656464;
+  cursor: pointer;
+  color : white;
+  padding: 0 0rem;
+}
+
+.SkillsButton:hover{
+  background-color: #2b2a2a ;
+  color: white;
+}.grid {
+  display : grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.element {
+  margin: 0px;
+  padding : 10px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#inventory {
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  width: 90%;
+  border-radius: 5px;
+  order: 8; 
+}
+
+#inventory > select {
+  width: 270px;
+}
+
+#inventory > button, .deleteLink{
+  background-color: #656464;
+  border-radius: .25em;
+  color: #D1D7E0;
+  padding: 0px 2px;
+  margin-left: 10px;
+  height: 1.5rem;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.deleteLink{
+  color: red;
+}
+
+#inventory > button:hover {
+  background-color: rgba(141,0,0, 1);
+  color: white;
+}
+
+
+
+.gridSpells {
+  display : grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.elementSpells {
+  margin: 4px;
+  padding : 5px;
+  width : 200px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+#spells{
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  width : 90%;
+  height : 100%;
+  order: 9; 
+}
+
+.Spell.enabled, .Spell.disabled{
+  height: 20px;
+  border-radius: 20px;
+  padding: 1px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-grid;
+  color: white !important;
+}
+
+.Spell.enabled{
+  background-color: rgba(141,0,0, 1);
+}
+
+.Spell.disabled{
+  background-color: rgba(141,0,0, 0.425);
+}
+
+.SpellsButton, .SpellsButton2 {
+  width: 5em;
+  height :1em !important; 
+  font-size: 15px;
+  border-radius: 25px;
+  background-color: #656464;
+  cursor: pointer;
+  line-height: 1em;
+  color : white;
+  padding: 0 0rem;
+}
+.SpellsButton {
+  width:1em !important;
+}
+
+.SpellsButton:hover{
+  background-color: #4CAF50;
+  color: white;
+}* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: linear-gradient(to top, #ffffff 0%, #d4d4d4 100%);
+  min-height: 100%;
+  margin: 0;
+  font-size: calc(10px + 2vmin);
+  color: #8d0000;
+}
+
+main {
+  height : 100%;
+  display: flex; 
+}
+
+#Infodiv{
+  margin: 0;
+  flex : 1;
+}
+
+#Dashboarddiv{
+  width : 100%;
+  height : 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  flex : 5;
+}
+
+section > *+* {
+  margin-left: 2rem;
+}
+
+button {
+  padding: 0 1rem;
+  border: none;
+  font-size: 2rem;
+  height: 3rem;
+}
+
+h1 {
+  font-size: calc(20px + 6vmin);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-top: 0;
+}
+
+.count {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 4rem;
+  color: #FFE9C2;
+}
+
+[disabled] + .count {
+  color: #999;
+}
+
+.add {
+  background-color: mediumseagreen;
+  color: #DBECFF;
+}
+
+.sub {
+  background-color: mediumvioletred;
+  color: #DBECFF;
+}
+
+.sub[disabled] {
+  opacity: .5;
+}
+
+#chart1 {
+  order: 2; 
+  flex : 1 0 25%;
+}
+
+#chart2 {
+  order: 3; 
+  flex : 1 0 25%;
+}
+
+#chart3 {
+  order: 4; 
+  flex : 1 0 25%;
+}
+/*# sourceMappingURL=bundle.css.map*/

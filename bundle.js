@@ -18362,6 +18362,10 @@ var Spells_default = /*#__PURE__*/__webpack_require__.n(Spells);
 var App = __webpack_require__(140);
 var App_default = /*#__PURE__*/__webpack_require__.n(App);
 
+// EXTERNAL MODULE: ./src/components/views/App/Responsive.css
+var Responsive = __webpack_require__(141);
+var Responsive_default = /*#__PURE__*/__webpack_require__.n(Responsive);
+
 // CONCATENATED MODULE: ./node_modules/whatwg-fetch/fetch.js
 var support = {
   searchParams: 'URLSearchParams' in self,
@@ -18883,8 +18887,15 @@ if (!self.fetch) {
 // CONCATENATED MODULE: ./src/apiDnD/DnD.js
 
 var baseURL = 'http://dnd5eapi.co/api';
+var init = {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  credentials: 'same-origin'
+};
 var DnD_getFromURL = function getFromURL(url) {
-  return fetch(url).then(function (res) {
+  return fetch(url, init).then(function (res) {
     if (res.status >= 400) {
       return new Error('Bad response server');
     }
@@ -19057,7 +19068,7 @@ var init_loadSpells = function loadSpells(state, actions) {
   }
 };
 
-/* harmony default export */ var init = (function (state, actions) {
+/* harmony default export */ var src_init = (function (state, actions) {
   init_loadEquipment(state, actions);
   init_loadClasses(state, actions);
   init_loadCategory('races', state, actions);
@@ -19089,6 +19100,7 @@ function App__arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0,
 
 
 
+
 var abilityBasis = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
 
 var App_getSkillAbilities = function getSkillAbilities(bdd, skills) {
@@ -19099,7 +19111,7 @@ var App_getSkillAbilities = function getSkillAbilities(bdd, skills) {
 };
 
 /* harmony default export */ var App_App = (function (state, actions) {
-  init(state, actions);
+  src_init(state, actions);
   var stats = state.stats;
   var charStats = state.character.stats;
 
@@ -34226,6 +34238,12 @@ webpackContext.id = 136;
 
 /***/ }),
 /* 140 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 141 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

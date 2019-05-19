@@ -386,5 +386,65 @@ p {
 #chart3 {
   order: 4; 
   flex : 1 0 25%;
+}@media screen and (max-width: 1064px) {
+  main
+  {
+   flex-direction: column;
+  }
+  #info{
+    width: 100vw;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    
+  }
+  .infochild{
+    flex: 1 0 21%;
+  }
+  #Infodiv{
+    width: 100vw;
+  }
+
+  #printicon{
+    width: 20px;
+    height: 20px;
+    margin : 20px !important;
+  }
+
+  #avatar{
+    display: none;
+    visibility: hidden;
+  }
+  .searchInput{
+    margin: 2px !important;
+  }
+  div {
+    margin:0;
+  }
+
+  #Dashboarddiv {
+    justify-items: center;
+    align-items: center;
+  }
+
+  #chart1 {
+    order : 1 !important;
+  }
+  .stats {
+    order : 2 !important;
+  }
+  #chart2 {
+    order : 3 !important;
+  }
+  #skillsArea{
+    order : 4 !important;
+  }
+  #chart3 {
+    order : 5 !important;
+  }
+  .stats2{
+    order : 6 !important;
+  }
 }
+
+
 /*# sourceMappingURL=bundle.css.map*/

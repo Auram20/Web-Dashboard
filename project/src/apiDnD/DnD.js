@@ -1,9 +1,22 @@
 import {fetch} from 'whatwg-fetch'
 
-const baseURL = 'http://dnd5eapi.co/api'
+const baseURL = '//dnd5eapi.co/api'
+
+const init = {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': baseURL,
+    'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT, DELETE',
+    'Access-Control-Allow-Headers': 'Content-Type, X-Custom-Header',
+    'Access-Control-Max-Age': 86400,
+    'Access-Control-Allow-Credentials': true
+  },
+  credentials: 'include'
+}
 
 export const getFromURL = (url) => {
-  return fetch(url)
+  return fetch(url, init)
     .then(res => {
       if (res.status >= 400) {
         return new Error('Bad response server')

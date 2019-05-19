@@ -3,6 +3,7 @@ const path = require('path')
 const pkg = require('./package.json')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const libraryName = pkg.name
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const plugins = [
   new ExtractTextPlugin({
@@ -10,6 +11,7 @@ const plugins = [
     allChunks: true
   }),
   new webpack.optimize.ModuleConcatenationPlugin(),
+  new HtmlWebpackPlugin()
 ]
 
 const config = {
@@ -18,11 +20,12 @@ const config = {
   ],
   devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, './lib'),
+    path: path.resolve(__dirname, './build'),
     filename: 'bundle.js',
     library: libraryName,
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
+	publicPath: "https://auram20.github.io/Web-Dashboard/"
   },
   module: {
     rules: [

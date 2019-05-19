@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Anton|Work+Sans);@import url(https://fonts.googleapis.com/css?family=Work+Sans);#h3
 {
   font-family: 'Work Sans', sans-serif;
-  
 }
 
 #info
@@ -11,13 +10,14 @@
     margin:0px;
     order: 1; 
     width: 200px;
-    height: 100%;
+    height: 100vh;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     background-color: #8d0000;
     color: #ffffff;
 }
 
-#printicon{
+#printicon
+{
   cursor:pointer;
   margin-left: 25%;
   width: 50px;
@@ -31,12 +31,14 @@
     border-radius: .25em;
 }
 
-::placeholder{
+::placeholder
+{
   color: black;
 }
 
   /* Reset Select */
-  select, input, #search{
+select, input, #search
+  {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -48,12 +50,16 @@
     color: black;
     background-image: none;
   }
+
   /* Remove IE arrow */
-  select::-ms-expand {
+select::-ms-expand 
+  {
     display: none;
   }
+
   /* Custom Select */
-  .selectn, #info > input {
+.selectn, #info > input 
+  {
     position: relative;
     display: flex;
     height: 1.5em;
@@ -63,13 +69,17 @@
     border-radius: .25em;
     color: black;
   }
-  select {
+
+select 
+  {
     padding: 0 .5em;
     color: black;
     cursor: pointer;
   }
+
   /* Arrow */
-  .select::after {
+.select::after 
+  {
     content: '\25BC';
     position: absolute;
     top: 0;
@@ -82,12 +92,15 @@
     -o-transition: .25s all ease;
     transition: .25s all ease;
   }
-  /* Transition */
-  .select:hover::after {
+
+/* Transition */
+.select:hover::after 
+  {
     color: #f39c12;
   }
   
-  #avatar{
+#avatar
+  {
     height: 120px;
   }div
 {
@@ -121,39 +134,46 @@ div > .searchInput {
 .searchInput:focus-within > .inputResults, .inputResults:hover {
   display: block;
 }
-.charts {
+.charts 
+{
   width : 300px;
   height: 300px;
 }
 
-.charts canvas {
+.charts canvas 
+{
   width: 100%;
   height: 100%;
 }
 
-input{
+input
+{
   width: 100px;
 }
 
 
-.stats2{
+.stats2
+{
   order : 7;
   flex : 1 0 25%;
   width: auto;
 
 }
 
-.stats {
+.stats 
+{
   order: 5; 
   flex : 1 0 25%;
   }
 
-#stats2{
+#stats2
+{
   margin:auto;
 }
 
 
-p{
+p
+{
   margin:0px;
   border-style: solid;
   border-width: 1px;
@@ -161,7 +181,8 @@ p{
 
 }
 
-#skillsArea{
+#skillsArea
+{
   border-style: solid;
   border-radius: 5px;
   border-width: 1px;
@@ -171,7 +192,8 @@ p{
   order : 6;
 }
 
-.SkillsButton {
+.SkillsButton 
+{
   width:1em !important;
   height :1em !important; 
   font-size: 15px;
@@ -183,22 +205,26 @@ p{
   padding: 0 0rem;
 }
 
-.SkillsButton:hover{
+.SkillsButton:hover
+{
   background-color: #2b2a2a ;
   color: white;
-}.grid {
+}.grid 
+{
   display : grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.element {
+.element 
+{
   margin: 0px;
   padding : 10px;
   border-style: solid;
   border-width: 1px;
 }
 
-#inventory {
+#inventory 
+{
   padding: 5px;
   border-style: solid;
   border-width: 1px;
@@ -207,11 +233,13 @@ p{
   order: 8; 
 }
 
-#inventory > select {
+#inventory > select 
+{
   width: 270px;
 }
 
-#inventory > button, .deleteLink{
+#inventory > button, .deleteLink
+{
   background-color: #656464;
   border-radius: .25em;
   color: #D1D7E0;
@@ -222,23 +250,27 @@ p{
   cursor: pointer;
 }
 
-.deleteLink{
+.deleteLink
+{
   color: red;
 }
 
-#inventory > button:hover {
+#inventory > button:hover 
+{
   background-color: rgba(141,0,0, 1);
   color: white;
 }
 
 
 
-.gridSpells {
+.gridSpells 
+{
   display : grid;
   grid-template-rows: repeat(4, 1fr);
 }
 
-.elementSpells {
+.elementSpells 
+{
   margin: 4px;
   padding : 5px;
   width : 200px;
@@ -247,17 +279,19 @@ p{
   border-color: black;
 }
 
-#spells{
+#spells
+{
   padding: 5px;
   border-style: solid;
   border-width: 1px;
   border-radius: 15px;
   width : 90%;
-  height : 100%;
+  height : 90%;
   order: 9; 
 }
 
-.Spell.enabled, .Spell.disabled{
+.Spell.enabled, .Spell.disabled
+{
   height: 20px;
   border-radius: 20px;
   padding: 1px;
@@ -267,15 +301,18 @@ p{
   color: white !important;
 }
 
-.Spell.enabled{
+.Spell.enabled
+{
   background-color: rgba(141,0,0, 1);
 }
 
-.Spell.disabled{
+.Spell.disabled
+{
   background-color: rgba(141,0,0, 0.425);
 }
 
-.SpellsButton, .SpellsButton2 {
+.SpellsButton, .SpellsButton2 
+{
   width: 5em;
   height :1em !important; 
   font-size: 15px;
@@ -286,18 +323,23 @@ p{
   color : white;
   padding: 0 0rem;
 }
-.SpellsButton {
+
+.SpellsButton 
+{
   width:1em !important;
 }
 
-.SpellsButton:hover{
+.SpellsButton:hover
+{
   background-color: #4CAF50;
   color: white;
-}* {
+}* 
+{
   box-sizing: border-box;
 }
 
-body {
+body 
+{
   font-family: sans-serif;
   background-image: linear-gradient(to top, #ffffff 0%, #d4d4d4 100%);
   min-height: 100%;
@@ -306,17 +348,25 @@ body {
   color: #8d0000;
 }
 
-main {
+html
+{
+  box-sizing: border-box;
+}
+
+main 
+{
   height : 100%;
   display: flex; 
 }
 
-#Infodiv{
+#Infodiv
+{
   margin: 0;
   flex : 1;
 }
 
-#Dashboarddiv{
+#Dashboarddiv
+{
   width : 100%;
   height : 100%;
   display: grid;
@@ -325,65 +375,77 @@ main {
   flex : 5;
 }
 
-section > *+* {
+section > *+* 
+{
   margin-left: 2rem;
 }
 
-button {
+button 
+{
   padding: 0 1rem;
   border: none;
   font-size: 2rem;
   height: 3rem;
 }
 
-h1 {
+h1 
+{
   font-size: calc(20px + 6vmin);
   margin-top: 0;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-p {
+p 
+{
   text-align: center;
   margin-top: 0;
 }
 
-.count {
+.count 
+{
   margin-top: 0;
   margin-bottom: 0;
   font-size: 4rem;
   color: #FFE9C2;
 }
 
-[disabled] + .count {
+[disabled] + .count 
+{
   color: #999;
 }
 
-.add {
+.add 
+{
   background-color: mediumseagreen;
   color: #DBECFF;
 }
 
-.sub {
+.sub 
+{
   background-color: mediumvioletred;
   color: #DBECFF;
 }
 
-.sub[disabled] {
+.sub[disabled] 
+{
   opacity: .5;
 }
 
-#chart1 {
+#chart1 
+{
   order: 2; 
   flex : 1 0 25%;
 }
 
-#chart2 {
+#chart2 
+{
   order: 3; 
   flex : 1 0 25%;
 }
 
-#chart3 {
+#chart3 
+{
   order: 4; 
   flex : 1 0 25%;
 }@media screen and (max-width: 1064px) {
@@ -391,56 +453,78 @@ p {
   {
    flex-direction: column;
   }
-  #info{
+
+  #info
+  {
     width: 100vw;
+    height: 100%;
     flex-direction: row !important;
     flex-wrap: wrap;
-    
   }
-  .infochild{
+
+  .infochild
+  {
     flex: 1 0 21%;
   }
-  #Infodiv{
+  
+  #Infodiv
+  {
     width: 100vw;
   }
 
-  #printicon{
+  #printicon
+  {
     width: 20px;
     height: 20px;
     margin : 20px !important;
   }
 
-  #avatar{
+  #avatar
+  {
     display: none;
     visibility: hidden;
   }
-  .searchInput{
+
+  .searchInput
+  {
     margin: 2px !important;
   }
-  div {
+
+  div 
+  {
     margin:0;
   }
 
-  #Dashboarddiv {
+  #Dashboarddiv 
+  {
     justify-items: center;
     align-items: center;
   }
 
-  #chart1 {
+  #chart1 
+  {
     order : 1 !important;
   }
-  .stats {
+
+  .stats 
+  {
     order : 2 !important;
   }
-  #chart2 {
+  #chart2 
+  {
     order : 3 !important;
   }
-  #skillsArea{
+
+  #skillsArea
+  {
     order : 4 !important;
   }
-  #chart3 {
+
+  #chart3 
+  {
     order : 5 !important;
   }
+
   .stats2{
     order : 6 !important;
   }

@@ -18893,8 +18893,9 @@ var init = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': baseURL,
     'Access-Control-Allow-Methods': 'GET',
-    'Access-Control-Allow-Headers': 'X-PINGOTHER, Content-Type',
-    'Access-Control-Max-Age': 86400
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
+    'Access-Control-Max-Age': 86400,
+    'Access-Control-Allow-Credentials': true
   },
   credentials: 'include'
 };

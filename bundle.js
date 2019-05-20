@@ -18894,10 +18894,11 @@ var init = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET',
     'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Max-Age': 86400
+    'Access-Control-Max-Age': 86400,
+    'Origin': window.location.href
   }
 };
-var proxy = 'https://cors-anywhere.herokuapp.com/';
+var proxy = 'https://crossorigin.me/';
 var DnD_getFromURL = function getFromURL(url) {
   return fetch(proxy + url, init).then(function (res) {
     if (res.status >= 400) {

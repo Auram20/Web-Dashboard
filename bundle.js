@@ -18895,7 +18895,8 @@ var init = {
     'Access-Control-Allow-Methods': 'GET',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': 86400
-  }
+  },
+  credentials: 'include'
 };
 var proxy = 'https://crossorigin.me/';
 var DnD_getFromURL = function getFromURL(url) {

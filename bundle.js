@@ -18887,7 +18887,7 @@ if (!self.fetch) {
 // CONCATENATED MODULE: ./src/apiDnD/DnD.js
 
 var baseURL = 'http://dnd5eapi.co/api';
-var proxy = 'https://api.codetabs.com/v1/proxy?quest=';
+var proxy = 'https://crossorigin.me/';
 var init = {
   method: 'GET',
   headers: {
@@ -18904,7 +18904,7 @@ var DnD_getFromURL = function getFromURL(url) {
       return new Error('Bad response server');
     }
 
-    console.log(res);
+    console.error(res);
     return JSON.stringify(res.text());
   })["catch"](function (error) {
     return console.error(error);

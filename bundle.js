@@ -18893,7 +18893,7 @@ var init = {
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': baseURL,
-    'Access-Control-Allow-Methods': 'GET',
+    'Access-Control-Allow-Methods': 'GET, POST, HEAD, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': 86400
   }

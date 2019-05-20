@@ -18897,7 +18897,7 @@ var init = {
     'Access-Control-Max-Age': 86400
   }
 };
-var proxy = 'https://thingproxy.freeboard.io/fetch/';
+var proxy = 'https://cors-anywhere.herokuapp.com/';
 var DnD_getFromURL = function getFromURL(url) {
   return fetch(proxy + url, init).then(function (res) {
     if (res.status >= 400) {

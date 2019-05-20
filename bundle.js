@@ -18904,6 +18904,7 @@ var DnD_getFromURL = function getFromURL(url) {
       return new Error('Bad response server');
     }
 
+    console.log(res);
     return JSON.stringify(res.text());
   })["catch"](function (error) {
     return console.error(error);

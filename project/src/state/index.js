@@ -34,6 +34,7 @@ export default {
     spellList: new Array(10).fill([]),
     level: 0
   },
+  popup: true,
   avatarsList: [
     {
       name: 'Dwarf',

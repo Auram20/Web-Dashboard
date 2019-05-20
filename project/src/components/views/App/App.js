@@ -77,7 +77,7 @@ export default (state, actions) => {
 
   return (
     <main>
-      <Popup />
+      <Popup actions={actions} popup={state.popup} />
       <div id="Infodiv">
         <Infos state={state} actions={actions}/>
       </div>

@@ -18894,8 +18894,7 @@ var init = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET',
     'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Max-Age': 86400,
-    'Origin': window.location.href
+    'Access-Control-Max-Age': 86400
   }
 };
 var proxy = 'https://crossorigin.me/';

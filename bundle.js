@@ -18887,7 +18887,7 @@ if (!self.fetch) {
 // CONCATENATED MODULE: ./src/apiDnD/DnD.js
 
 var baseURL = 'http://dnd5eapi.co/api';
-var proxy = 'https://crossorigin.me/';
+var proxy = 'https://api.codetabs.com/v1/proxy?quest=';
 var init = {
   method: 'OPTIONS',
   headers: {

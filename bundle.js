@@ -18889,14 +18889,14 @@ if (!self.fetch) {
 var baseURL = 'http://dnd5eapi.co/api';
 var proxy = 'https://crossorigin.me/';
 var init = {
-  method: 'GET',
+  /* method: 'GET',
   headers: {
     'Content-Type': 'text/plain',
-    'Access-Control-Allow-Origin': baseURL,
+    'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': 86400
-  }
+  } */
 };
 var DnD_getFromURL = function getFromURL(url) {
   return fetch(proxy + url, init).then(function (res) {

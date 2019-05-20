@@ -18889,11 +18889,11 @@ if (!self.fetch) {
 var baseURL = 'http://dnd5eapi.co/api';
 var proxy = 'https://api.codetabs.com/v1/proxy?quest=';
 var init = {
-  method: 'OPTIONS',
+  method: 'GET',
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': 'text/plain',
     'Access-Control-Allow-Origin': baseURL,
-    'Access-Control-Allow-Methods': 'GET, POST, HEAD, OPTIONS',
+    'Access-Control-Allow-Methods': 'GET',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': 86400
   }

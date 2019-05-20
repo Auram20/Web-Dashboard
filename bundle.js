@@ -18889,7 +18889,7 @@ if (!self.fetch) {
 var baseURL = 'http://dnd5eapi.co/api';
 var proxy = 'https://crossorigin.me/';
 var init = {
-  method: 'GET',
+  method: 'OPTIONS',
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': baseURL,
@@ -18955,6 +18955,10 @@ var getRaces = function getRaces() {
   return getDetailedRessource('races');
 };
 // CONCATENATED MODULE: ./src/init.js
+function init__objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { init__defineProperty(target, key, source[key]); }); } return target; }
+
+function init__defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -18963,34 +18967,54 @@ var hasLoaded = function hasLoaded(smthg) {
     return true && state.load[smthg];
   };
 };
-/* const loadCategory = (category, state, actions) => {
+
+var init_loadCategory = function loadCategory(category, state, actions) {
   if (!hasLoaded(category)(state)) {
-    actions.load({what: category,
-      promise: DnD.getDetailedRessource(category)
-        .then((items) => actions.update({data: items, what: category}))
-    })
+    actions.load({
+      what: category,
+      promise: getDetailedRessource(category).then(function (items) {
+        return actions.update({
+          data: items,
+          what: category
+        });
+      })
+    });
   }
-}
+};
 
-const loadLevelClass = (actions) => (obj) => {
-  obj.promise
-    .then(
-      (levelsClass) =>
-        levelsClass.map((levels, index) => ({...obj.items[index], levels: levels}))
-    )
-    .then((items) => actions.update({data: items, what: 'classes'}))
-}
+var loadLevelClass = function loadLevelClass(actions) {
+  return function (obj) {
+    obj.promise.then(function (levelsClass) {
+      return levelsClass.map(function (levels, index) {
+        return init__objectSpread({}, obj.items[index], {
+          levels: levels
+        });
+      });
+    }).then(function (items) {
+      return actions.update({
+        data: items,
+        what: 'classes'
+      });
+    });
+  };
+};
 
-const loadClasses = (state, actions) => {
+var init_loadClasses = function loadClasses(state, actions) {
   if (!hasLoaded('classes')(state)) {
-    actions.load({what: 'classes',
-      promise: DnD.getDetailedRessource('classes')
-        .then((items) => ({items: items, promise: Promise.all(items.map(({name}) => DnD.getLevels(name.toLowerCase())))}))
-        .then(loadLevelClass(actions))
-    })
+    actions.load({
+      what: 'classes',
+      promise: getDetailedRessource('classes').then(function (items) {
+        return {
+          items: items,
+          promise: Promise.all(items.map(function (_ref) {
+            var name = _ref.name;
+            return getLevels(name.toLowerCase());
+          }))
+        };
+      }).then(loadLevelClass(actions))
+    });
   }
-} */
-
+};
 
 var init_loadEquipment = function loadEquipment(state, actions) {
   if (!hasLoaded('equipment')(state)) {
@@ -19024,32 +19048,37 @@ var init_loadEquipment = function loadEquipment(state, actions) {
     });
   }
 };
-/* const loadSpells = (state, actions) => {
-  if (!hasLoaded('spells')(state)) {
-    actions.load({what: 'spells',
-      promise: DnD.getDetailedRessource('spells')
-        .then((items) => {
-          const itemsGrouped = groupBy(items, 'level', (key) => {
-            switch (key) {
-              case (-1):
-                return 0
-              default:
-                return key
-            }
-          })
-          actions.update({data: itemsGrouped, what: 'spells'})
-        })
-    })
-  }
-} */
 
+var init_loadSpells = function loadSpells(state, actions) {
+  if (!hasLoaded('spells')(state)) {
+    actions.load({
+      what: 'spells',
+      promise: getDetailedRessource('spells').then(function (items) {
+        var itemsGrouped = groupBy(items, 'level', function (key) {
+          switch (key) {
+            case -1:
+              return 0;
+
+            default:
+              return key;
+          }
+        });
+        actions.update({
+          data: itemsGrouped,
+          what: 'spells'
+        });
+      })
+    });
+  }
+};
 
 /* harmony default export */ var src_init = (function (state, actions) {
-  init_loadEquipment(state, actions); // loadClasses(state, actions)
-  // loadCategory('races', state, actions)
-  // loadCategory('ability-scores', state, actions)
-  // loadSpells(state, actions)
-  // loadCategory('skills', state, actions)
+  init_loadEquipment(state, actions);
+  init_loadClasses(state, actions);
+  init_loadCategory('races', state, actions);
+  init_loadCategory('ability-scores', state, actions);
+  init_loadSpells(state, actions);
+  init_loadCategory('skills', state, actions);
 });
 // CONCATENATED MODULE: ./src/components/views/App/App.js
 function App__objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { App__defineProperty(target, key, source[key]); }); } return target; }

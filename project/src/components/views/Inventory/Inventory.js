@@ -7,7 +7,7 @@ export default (props) => {
   const {bdd, inventoryList} = state
   const Inventory = Select('inventory')
 
-  const weightInv = bdd ? inventoryList.reduce((acc, inv) => bdd.inventory[inv.value].weight + acc, 0) : 0
+  const weightInv = bdd && inventoryList.length ? inventoryList.reduce((acc, inv) => bdd.inventory[inv.value].weight + acc, 0) : 0
 
   const firstWeapon = state.weapon1.value ? bdd.weapons[state.weapon1.value] : null
   const secondWeapon = state.weapon2.value ? bdd.weapons[state.weapon2.value] : null
@@ -26,7 +26,7 @@ export default (props) => {
   return (
     <div id="inventory">
       INVENTORY
-      <Inventory onchange={(e) => actions.change({event: e, what: 'inventory'})} state={state}>Inventory</Inventory>
+      <Inventory onchange={(e) => actions.change({value: e.target.value, what: 'inventory'})} state={state}>Inventory</Inventory>
       <button type="button" onclick={actions.addToInvList}> Ajouter </button>
       <div className="grid">
         {firstWeaponDiv}

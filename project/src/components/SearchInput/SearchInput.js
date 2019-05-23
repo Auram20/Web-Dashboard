@@ -22,7 +22,7 @@ export default (category) => (props, children) => {
 
   return (
     <div className={category + ' searchInput'}>
-      <input type='text' value={state[what].input} placeholder={children} onchange={() => actions.change({what})} onkeyup={(e) => actions.keyup({event: e, what})}/>
+      <input type='text' value={state[what].input} placeholder={children} onchange={() => actions.change({what, value: null})} onkeyup={(e) => actions.keyup({event: e, what})}/>
       <div className='inputResults'>
         {results}
       </div>

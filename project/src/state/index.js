@@ -26,7 +26,7 @@ export default {
     value: null
   },
   inventory: {
-    input: null
+    value: null
   },
   skillList: [],
   inventoryList: [],

@@ -26,8 +26,8 @@ export default {
       return {...acc, bdd: newBdd, load: newLoad, loading: newLoading}
     },
     state),
-  change: ({what}) => (state) => {
-    return ({...state, [what]: {...state[what], value: null}})
+  change: ({what, value}) => (state) => {
+    return ({...state, [what]: {...state[what], value: value}})
   },
   keyup: ({event, what}) => (state) => {
     return ({...state, [what]: {...state[what], input: event.target.value}})
@@ -48,10 +48,10 @@ export default {
   changeLevel: (e) => (state) => ({...state, character: {...state.character, level: clamp(e.target.min, e.target.max, e.target.value)}}),
   changeStat: ({event, key}) => (state) => ({...state, stats: {...state.stats, [key]: clamp(event.target.min, event.target.max, event.target.value) - event.target.min}}),
   addToInvList: () => state => {
-    if (state.inventory.input === null) {
+    if (state.inventory.value === null) {
       return state
     }
-    const list = [...state.inventoryList, makeInvList(state.inventory.input)]
+    const list = [...state.inventoryList, makeInvList(state.inventory.value)]
     return {...state, inventoryList: list}
   },
   deleteToInvList: id => state => {
